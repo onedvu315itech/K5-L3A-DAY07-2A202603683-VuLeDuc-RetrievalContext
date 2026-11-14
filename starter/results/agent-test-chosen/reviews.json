@@ -1,0 +1,88 @@
+[
+  {
+    "query_id": "Q024",
+    "answerable": true,
+    "status": "answered",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "[agent-test-chosen] Full score (2/2): Answer accurately and completely addresses 'What did the British Tea Act make the East India Company in the American colonies?' matching expected answer ('The sole legal supplier of tea to the American colonies.'), and cited chunk(s) ['principles-economics-3e-monopoly-p1-chunk1'] directly contain the supporting evidence in the PDF."
+  },
+  {
+    "query_id": "Q025",
+    "answerable": true,
+    "status": "answered",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "[agent-test-chosen] Full score (2/2): Answer accurately and completely addresses 'What is the key difference between marginal revenue for a perfectly competitive firm and for a monopolist?' matching expected answer ('Under perfect competition marginal revenue equals price; for a monopolist it does not, because changes in output affect the price.'), and cited chunk(s) ['principles-economics-3e-monopoly-p13-chunk1'] directly contain the supporting evidence in the PDF."
+  },
+  {
+    "query_id": "Q026",
+    "answerable": true,
+    "status": "answered",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "[agent-test-chosen] Full score (2/2): Answer accurately and completely addresses 'In section 9.1, why can one producer serve the market more efficiently than several smaller natural-monopoly utilities?' matching expected answer ('Because of economies of scale, one producer avoids the duplicate physical capital investments that smaller producers would need.'), and cited chunk(s) ['principles-economics-3e-monopoly-p4-chunk1'] directly contain the supporting evidence in the PDF."
+  },
+  {
+    "query_id": "Q027",
+    "answerable": true,
+    "status": "answered",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "[agent-test-chosen] Full score (2/2): Answer accurately and completely addresses 'What happens to a firm's quantity demanded at a given price as more firms enter a monopolistically competitive market?' matching expected answer ('The quantity demanded for any particular firm declines.'), and cited chunk(s) ['principles-economics-3e-monopoly-p29-chunk2'] directly contain the supporting evidence in the PDF."
+  },
+  {
+    "query_id": "Q028",
+    "answerable": true,
+    "status": "answered",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "[agent-test-chosen] Full score (2/2): Answer accurately and completely addresses 'What two conflicting temptations do oligopolistic firms face?' matching expected answer ('To collaborate as if they were a single monopoly, or to compete individually by expanding output and cutting prices.'), and cited chunk(s) ['principles-economics-3e-monopoly-p24-chunk3'] directly contain the supporting evidence in the PDF."
+  },
+  {
+    "query_id": "Q029",
+    "answerable": true,
+    "status": "answered",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "[agent-test-chosen] Full score (2/2): Answer accurately and completely addresses 'Why did the soap cartel disintegrate?' matching expected answer ('Because of the strong temptation for each member to maximize its own individual profits.'), and cited chunk(s) ['principles-economics-3e-monopoly-p38-chunk1'] directly contain the supporting evidence in the PDF."
+  },
+  {
+    "query_id": "Q030",
+    "answerable": true,
+    "status": "answered",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "[agent-test-chosen] Full score (2/2): Answer accurately and completely addresses 'In section 10.2, what is a kinked demand curve?' matching expected answer ('A demand curve in which competing oligopoly firms commit to match price cuts but not price increases.'), and cited chunk(s) ['principles-economics-3e-monopoly-p39-chunk0'] directly contain the supporting evidence in the PDF."
+  },
+  {
+    "query_id": "U003",
+    "answerable": false,
+    "status": "abstain",
+    "citation_support": [],
+    "abstention_correct": true,
+    "reason": "[agent-test-chosen] Question asks about out-of-corpus facts (Table 11.2 on page 50 only reports Wireless, Personal Computers, Airlines, and Automobiles; U.S. commercial banking is not included in Table 11.2 (verified on page 50).). Agent properly abstained without fabricating facts or citations."
+  },
+  {
+    "query_id": "U004",
+    "answerable": false,
+    "status": "abstain",
+    "citation_support": [],
+    "abstention_correct": true,
+    "reason": "[agent-test-chosen] Question asks about out-of-corpus facts (Section 11.1 covers the Sherman Act (1890), Clayton Act (1914), and Celler-Kefauver Act (1950), but never mentions the EU Digital Markets Act or gatekeeper turnover fines (verified across pages 45-50).). Agent properly abstained without fabricating facts or citations."
+  }
+]

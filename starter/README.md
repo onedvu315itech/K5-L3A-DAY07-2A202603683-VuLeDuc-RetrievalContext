@@ -61,3 +61,26 @@ Thay đường dẫn trong `< >`. Script tổng hợp nhãn bạn đã chấm, k
 TF-IDF dùng cách tách từ đơn giản. `baseline.py` dùng mặc định context budget 800 ký tự, gồm cả nguồn; chunk không vừa bị bỏ. Bạn có thể chọn cách khác. File kết quả cùng tên sẽ bị ghi đè. `starter/data/` và `starter/results/` không được Git theo dõi mặc định; nếu được phép chia sẻ, dùng `git add -f <đường-dẫn>`, hoặc ghi cách tái tạo. Không nộp dữ liệu mật và secret.
 
 Khung agent ưu tiên giữ chunk từ lần search trước. Khi chunk đầu chiếm gần hết budget, lần search sau có thể không thêm được evidence; hãy kiểm tra trace và thử cách chọn context phù hợp trên dev. Citation ID hợp lệ hoặc verifier trả “đúng” không đảm bảo câu trả lời được hỗ trợ; cần chấm thủ công.
+
+---
+
+## 5. Hướng dẫn chạy toàn bộ thực nghiệm Day 7 (Đã hoàn thiện)
+
+Các module đã hiện thực trong `starter/`:
+- `starter/agentic.py`: Hiện thực `OpenAIController.decide` (`gpt-4o-mini`) và 4 phương pháp `Retriever.search`: `DenseRetriever` (PostgreSQL `pgvector` 384d), `LexicalRetriever` (BM25 / TF-IDF + metadata filter), `HybridRetriever` (Reciprocal Rank Fusion / Linear Fusion), và `RerankRetriever` (cross-feature bigram/trigram + proximity + Key Terms reranking).
+- `starter/run_experiments.py`: Chạy toàn bộ 5 cấu hình retrieval trên `dev` (`23` câu), 3 cấu hình trên `test` (`7` câu), và đánh giá Agent trên toàn bộ `34` cases (`25 dev` + `9 test`).
+- `starter/audit_and_grade.py`: Kiểm toán citation/answer và xuất `reviews.json`, `summary.json`, `manual_context_reviews.json`, `retrieval_selection_evidence.md`.
+
+```bash
+# 1. Khởi động PostgreSQL + pgvector (cổng 55433) và cấu hình starter/.env từ starter/.env.example
+docker compose -f starter/docker-compose.yml up -d
+
+# 2. Chạy toàn bộ unit tests (15/15 pass)
+python -m unittest discover -s tests -v
+
+# 3. Chuyển đổi dữ liệu Day 6 (206 chunks + 30 câu có evidence + 4 câu thiếu evidence)
+python starter/convert_day6.py --chunks starter/data/day6_raw/strategy_a.jsonl --questions starter/data/day6_raw/benchmark.json --output starter/data/converted
+
+# 4. Chạy trọn bộ benchmark Retrieval + Agent (34 cases) + xuất summary/evidence
+python starter/run_experiments.py
+```

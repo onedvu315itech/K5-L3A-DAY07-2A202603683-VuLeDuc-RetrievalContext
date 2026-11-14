@@ -1,0 +1,16 @@
+{
+  "strategy": "hybrid_rerank_k4_b3600",
+  "split": "test",
+  "top_k": 4,
+  "budget_chars": 3600,
+  "n": 7,
+  "hit1": 7,
+  "hit1_rate": 1.0,
+  "hit3": 7,
+  "hit3_rate": 1.0,
+  "context_hit": 7,
+  "context_hit_rate": 1.0,
+  "avg_context_chars": 2997.43,
+  "median_ms": 111.956,
+  "service_cost_usd": 0.0
+}

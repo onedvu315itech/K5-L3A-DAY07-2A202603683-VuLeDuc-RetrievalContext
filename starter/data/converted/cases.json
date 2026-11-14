@@ -1,0 +1,244 @@
+[
+  {
+    "id": "Q001",
+    "split": "dev",
+    "question": "What is a monopoly?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "Q002",
+    "split": "dev",
+    "question": "What are barriers to entry?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "Q003",
+    "split": "dev",
+    "question": "What conditions lead to a natural monopoly?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "Q004",
+    "split": "dev",
+    "question": "In section 9.1, why were other firms unable to compete with ALCOA in aluminum in the 1930s?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "Q005",
+    "split": "dev",
+    "question": "What do governments do to create a legal monopoly?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "Q006",
+    "split": "dev",
+    "question": "How do patents let innovative firms recover their research and development costs?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "Q007",
+    "split": "dev",
+    "question": "What is predatory pricing?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "Q008",
+    "split": "dev",
+    "question": "What demand curve does a monopolist face?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "Q009",
+    "split": "dev",
+    "question": "Why does total revenue for a monopolist first rise and then fall as it sells more output?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "Q010",
+    "split": "dev",
+    "question": "Why is a monopolist's marginal revenue less than the price of the unit it sells?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "Q011",
+    "split": "dev",
+    "question": "In section 9.2, what rule does a profit-maximizing monopoly follow to choose its quantity of output?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "Q012",
+    "split": "dev",
+    "question": "Once a monopolist has chosen its output, how does it decide what price to charge?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "Q013",
+    "split": "dev",
+    "question": "Why is a monopoly considered allocatively inefficient?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "Q014",
+    "split": "dev",
+    "question": "In what ways can a firm make its products different from those of its competitors?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "Q015",
+    "split": "dev",
+    "question": "What characterizes monopolistic competition?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "Q016",
+    "split": "dev",
+    "question": "How does the demand curve facing a monopolistically competitive firm compare with that of a monopoly in terms of elasticity?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "Q017",
+    "split": "dev",
+    "question": "In section 10.1, what happens to monopolistically competitive firms' economic profits in the long run?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "Q018",
+    "split": "dev",
+    "question": "How can a successful advertising campaign help a monopolistically competitive firm?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "Q019",
+    "split": "dev",
+    "question": "What defines an oligopoly?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "Q020",
+    "split": "dev",
+    "question": "What does mutual interdependence mean in an oligopoly?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "Q021",
+    "split": "dev",
+    "question": "How can the relationship between market demand and economies of scale limit an oligopoly to only a few firms?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "Q022",
+    "split": "dev",
+    "question": "In section 10.2, what is a cartel?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "Q023",
+    "split": "dev",
+    "question": "What is game theory?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "Q024",
+    "split": "test",
+    "question": "What did the British Tea Act make the East India Company in the American colonies?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "Q025",
+    "split": "test",
+    "question": "What is the key difference between marginal revenue for a perfectly competitive firm and for a monopolist?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "Q026",
+    "split": "test",
+    "question": "In section 9.1, why can one producer serve the market more efficiently than several smaller natural-monopoly utilities?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "Q027",
+    "split": "test",
+    "question": "What happens to a firm's quantity demanded at a given price as more firms enter a monopolistically competitive market?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "Q028",
+    "split": "test",
+    "question": "What two conflicting temptations do oligopolistic firms face?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "Q029",
+    "split": "test",
+    "question": "Why did the soap cartel disintegrate?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "Q030",
+    "split": "test",
+    "question": "In section 10.2, what is a kinked demand curve?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "U001",
+    "split": "dev",
+    "question": "What is the Gini coefficient of income inequality in the United States in 2020 according to Chapter 9?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Chapters 9-11.1 cover monopoly, monopolistic competition, oligopoly, and corporate mergers; Gini coefficient and income inequality statistics are not in the corpus (verified via full-text search for Gini and inequality across all 50 pages)."
+  },
+  {
+    "id": "U002",
+    "split": "dev",
+    "question": "What was the exact criminal fine paid by Hoffman-La Roche in the 1999 international vitamin cartel case?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Section 10.2 discusses the Archer Daniels Midland (ADM) lysine cartel ( million fine) and French soap cartel (€361 million fine), but contains no mention of Hoffman-La Roche or the vitamin cartel (verified across pages 33-38)."
+  },
+  {
+    "id": "U003",
+    "split": "test",
+    "question": "What is the four-firm concentration ratio and Herfindahl-Hirschman Index (HHI) for the U.S. commercial banking industry in Table 11.2?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Table 11.2 on page 50 only reports Wireless, Personal Computers, Airlines, and Automobiles; U.S. commercial banking is not included in Table 11.2 (verified on page 50)."
+  },
+  {
+    "id": "U004",
+    "split": "test",
+    "question": "Under the European Union Digital Markets Act of 2022, what percentage of global turnover can be fined to gatekeeper monopolies?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Section 11.1 covers the Sherman Act (1890), Clayton Act (1914), and Celler-Kefauver Act (1950), but never mentions the EU Digital Markets Act or gatekeeper turnover fines (verified across pages 45-50)."
+  }
+]

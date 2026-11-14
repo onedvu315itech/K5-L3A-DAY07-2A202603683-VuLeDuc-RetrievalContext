@@ -1,0 +1,16 @@
+{
+  "strategy": "hybrid_rrf_b3200",
+  "split": "dev",
+  "top_k": 3,
+  "budget_chars": 3200,
+  "n": 23,
+  "hit1": 8,
+  "hit1_rate": 0.3478,
+  "hit3": 14,
+  "hit3_rate": 0.6087,
+  "context_hit": 14,
+  "context_hit_rate": 0.6087,
+  "avg_context_chars": 2935,
+  "median_ms": 96.228,
+  "service_cost_usd": 0.0
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "query_id": "Q024",
+    "answerable": true,
+    "status": "abstain",
+    "answer_grade": 0,
+    "citation_support": [],
+    "reason": "[agent-test-baseline] False abstention (graded 0 per rubric). Context budget (800 chars) dropped the retrieved ~900-char evidence chunks, leaving empty/insufficient context."
+  },
+  {
+    "query_id": "Q025",
+    "answerable": true,
+    "status": "abstain",
+    "answer_grade": 0,
+    "citation_support": [],
+    "reason": "[agent-test-baseline] False abstention (graded 0 per rubric). Context budget (800 chars) dropped the retrieved ~900-char evidence chunks, leaving empty/insufficient context."
+  },
+  {
+    "query_id": "Q026",
+    "answerable": true,
+    "status": "abstain",
+    "answer_grade": 0,
+    "citation_support": [],
+    "reason": "[agent-test-baseline] False abstention (graded 0 per rubric). Context budget (800 chars) dropped the retrieved ~900-char evidence chunks, leaving empty/insufficient context."
+  },
+  {
+    "query_id": "Q027",
+    "answerable": true,
+    "status": "abstain",
+    "answer_grade": 0,
+    "citation_support": [],
+    "reason": "[agent-test-baseline] False abstention (graded 0 per rubric). Context budget (800 chars) dropped the retrieved ~900-char evidence chunks, leaving empty/insufficient context."
+  },
+  {
+    "query_id": "Q028",
+    "answerable": true,
+    "status": "abstain",
+    "answer_grade": 0,
+    "citation_support": [],
+    "reason": "[agent-test-baseline] False abstention (graded 0 per rubric). Context budget (800 chars) dropped the retrieved ~900-char evidence chunks, leaving empty/insufficient context."
+  },
+  {
+    "query_id": "Q029",
+    "answerable": true,
+    "status": "abstain",
+    "answer_grade": 0,
+    "citation_support": [],
+    "reason": "[agent-test-baseline] False abstention (graded 0 per rubric). Context budget (800 chars) dropped the retrieved ~900-char evidence chunks, leaving empty/insufficient context."
+  },
+  {
+    "query_id": "Q030",
+    "answerable": true,
+    "status": "abstain",
+    "answer_grade": 0,
+    "citation_support": [],
+    "reason": "[agent-test-baseline] False abstention (graded 0 per rubric). Context budget (800 chars) dropped the retrieved ~900-char evidence chunks, leaving empty/insufficient context."
+  },
+  {
+    "query_id": "U003",
+    "answerable": false,
+    "status": "abstain",
+    "citation_support": [],
+    "abstention_correct": true,
+    "reason": "[agent-test-baseline] Question asks about out-of-corpus facts (Table 11.2 on page 50 only reports Wireless, Personal Computers, Airlines, and Automobiles; U.S. commercial banking is not included in Table 11.2 (verified on page 50).). Agent properly abstained without fabricating facts or citations."
+  },
+  {
+    "query_id": "U004",
+    "answerable": false,
+    "status": "abstain",
+    "citation_support": [],
+    "abstention_correct": true,
+    "reason": "[agent-test-baseline] Question asks about out-of-corpus facts (Section 11.1 covers the Sherman Act (1890), Clayton Act (1914), and Celler-Kefauver Act (1950), but never mentions the EU Digital Markets Act or gatekeeper turnover fines (verified across pages 45-50).). Agent properly abstained without fabricating facts or citations."
+  }
+]

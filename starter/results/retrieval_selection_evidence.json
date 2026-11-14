@@ -1,0 +1,1512 @@
+{
+  "selection_protocol": "All 5 retrieval configurations were evaluated strictly on the 23 answerable dev questions (Q001-Q023) using identical corpus (A_900, 206 chunks), embedding model (paraphrase-multilingual-MiniLM-L12-v2, 384d), and hit definition. The winning configuration (dev-5-hybrid-rerank-k4-b3600) was locked before running on the held-out test split (Q024-Q030).",
+  "dev_summaries": {
+    "dev-1-baseline-tfidf": {
+      "strategy": "tfidf_baseline",
+      "split": "dev",
+      "top_k": 3,
+      "budget_chars": 800,
+      "n": 23,
+      "hit1": 7,
+      "hit1_rate": 0.3043,
+      "hit3": 12,
+      "hit3_rate": 0.5217,
+      "context_hit": 3,
+      "context_hit_rate": 0.1304,
+      "avg_context_chars": 241.22,
+      "median_ms": 0.754,
+      "service_cost_usd": 0.0
+    },
+    "dev-2-dense-pgvector": {
+      "strategy": "dense_pgvector",
+      "split": "dev",
+      "top_k": 3,
+      "budget_chars": 800,
+      "n": 23,
+      "hit1": 8,
+      "hit1_rate": 0.3478,
+      "hit3": 12,
+      "hit3_rate": 0.5217,
+      "context_hit": 2,
+      "context_hit_rate": 0.087,
+      "avg_context_chars": 95.35,
+      "median_ms": 96.931,
+      "service_cost_usd": 0.0
+    },
+    "dev-3-lexical-bm25": {
+      "strategy": "lexical_bm25",
+      "split": "dev",
+      "top_k": 3,
+      "budget_chars": 800,
+      "n": 23,
+      "hit1": 7,
+      "hit1_rate": 0.3043,
+      "hit3": 10,
+      "hit3_rate": 0.4348,
+      "context_hit": 2,
+      "context_hit_rate": 0.087,
+      "avg_context_chars": 188.65,
+      "median_ms": 0.981,
+      "service_cost_usd": 0.0
+    },
+    "dev-4-hybrid-rrf-b3200": {
+      "strategy": "hybrid_rrf_b3200",
+      "split": "dev",
+      "top_k": 3,
+      "budget_chars": 3200,
+      "n": 23,
+      "hit1": 8,
+      "hit1_rate": 0.3478,
+      "hit3": 14,
+      "hit3_rate": 0.6087,
+      "context_hit": 14,
+      "context_hit_rate": 0.6087,
+      "avg_context_chars": 2935,
+      "median_ms": 96.228,
+      "service_cost_usd": 0.0
+    },
+    "dev-5-hybrid-rerank-k4-b3600": {
+      "strategy": "hybrid_rerank_k4_b3600",
+      "split": "dev",
+      "top_k": 4,
+      "budget_chars": 3600,
+      "n": 23,
+      "hit1": 10,
+      "hit1_rate": 0.4348,
+      "hit3": 15,
+      "hit3_rate": 0.6522,
+      "context_hit": 16,
+      "context_hit_rate": 0.6957,
+      "avg_context_chars": 2980.43,
+      "median_ms": 100.98,
+      "service_cost_usd": 0.0
+    }
+  },
+  "error_analysis_1_context_budget_starvation": {
+    "symptom": "In dev-1-baseline-tfidf, dev-2-dense-pgvector, and dev-3-lexical-bm25, Evidence Hit@3 was 10/23 to 12/23 (43.5%-52.2%), but Context Evidence Rate collapsed to only 2/23 or 3/23 (8.7%-13.0%).",
+    "root_cause": "Day 6 strategy_a.jsonl uses 900-character fixed-size chunks. When pack_context formats a chunk as '[chunk_id | source | page N]\\ntext', a 900-char chunk becomes ~970 characters, which exceeds budget=800 and is silently skipped!",
+    "affected_dev_questions": [
+      "Q001",
+      "Q003",
+      "Q005",
+      "Q012",
+      "Q016",
+      "Q017",
+      "Q020",
+      "Q021",
+      "Q022",
+      "Q023"
+    ],
+    "fix_and_impact": "Raised context budget from 800 to 3200 chars in Improvement 1 (dev-4-hybrid-rrf-b3200) and combined Dense+BM25 via RRF. Context Evidence Rate jumped from 2/23 (8.7%) to 14/23 (60.9%), and Evidence Hit@3 rose from 12/23 (52.2%) to 14/23 (60.9%)."
+  },
+  "error_analysis_2_metadata_key_and_definitional_reranking": {
+    "symptom": "Section-scoped queries (e.g., Q004, Q011, Q017, Q022) and short definitional queries (e.g., Q007 'What is predatory pricing?', Q022 'In section 10.2, what is a cartel?', Q023 'What is game theory?') either returned 0 chunks when filtering on metadata.section_id or ranked narrative mentions above the exact Key Terms / glossary definitions.",
+    "root_cause": "1) In Day 6 strategy_a.jsonl, section identifiers are stored under metadata.section_id_at_start and embedded in metadata.headings rather than metadata.section_id. 2) Dense cosine similarity scores narrative paragraphs similarly to compact Key Terms definitions.",
+    "fix_and_impact": "Mapped section_id filter to check section_id, section_id_at_start, and headings prefixes, and added RerankRetriever (candidate_k=15 -> top_k=4, budget=3600) scoring exact phrase bigrams/trigrams, proximity density, and Key Terms/Summary headings. Dev Hit@1 improved from 8/23 (34.8%) to 10/23 (43.5%), Hit@3 from 14/23 (60.9%) to 15/23 (65.2%), and Context Evidence Rate to 16/23 (69.6%)."
+  },
+  "per_question_dev_matrix": [
+    {
+      "query_id": "Q001",
+      "question": "What is a monopoly?",
+      "configs": {
+        "dev-1-baseline-tfidf": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 566,
+          "top1_id": "principles-economics-3e-monopoly-p19-chunk2",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p19-chunk3"
+          ],
+          "elapsed_ms": 0.93
+        },
+        "dev-2-dense-pgvector": {
+          "hit1": false,
+          "hit3": true,
+          "context_hit": false,
+          "context_chars": 0,
+          "top1_id": "principles-economics-3e-monopoly-p8-chunk1",
+          "packed_ids": [],
+          "elapsed_ms": 106.99
+        },
+        "dev-3-lexical-bm25": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 566,
+          "top1_id": "principles-economics-3e-monopoly-p19-chunk2",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p19-chunk3"
+          ],
+          "elapsed_ms": 1.21
+        },
+        "dev-4-hybrid-rrf-b3200": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 3011,
+          "top1_id": "principles-economics-3e-monopoly-p8-chunk1",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p8-chunk1",
+            "principles-economics-3e-monopoly-p24-chunk0",
+            "principles-economics-3e-monopoly-p39-chunk0"
+          ],
+          "elapsed_ms": 101.04
+        },
+        "dev-5-hybrid-rerank-k4-b3600": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 3011,
+          "top1_id": "principles-economics-3e-monopoly-p18-chunk3",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p18-chunk3",
+            "principles-economics-3e-monopoly-p39-chunk0",
+            "principles-economics-3e-monopoly-p8-chunk1"
+          ],
+          "elapsed_ms": 95.47
+        }
+      }
+    },
+    {
+      "query_id": "Q002",
+      "question": "What are barriers to entry?",
+      "configs": {
+        "dev-1-baseline-tfidf": {
+          "hit1": false,
+          "hit3": true,
+          "context_hit": false,
+          "context_chars": 321,
+          "top1_id": "principles-economics-3e-monopoly-p6-chunk5",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p6-chunk5"
+          ],
+          "elapsed_ms": 0.64
+        },
+        "dev-2-dense-pgvector": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 321,
+          "top1_id": "principles-economics-3e-monopoly-p3-chunk1",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p6-chunk5"
+          ],
+          "elapsed_ms": 88.63
+        },
+        "dev-3-lexical-bm25": {
+          "hit1": false,
+          "hit3": true,
+          "context_hit": false,
+          "context_chars": 321,
+          "top1_id": "principles-economics-3e-monopoly-p6-chunk5",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p6-chunk5"
+          ],
+          "elapsed_ms": 1.08
+        },
+        "dev-4-hybrid-rrf-b3200": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 2329,
+          "top1_id": "principles-economics-3e-monopoly-p3-chunk1",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p3-chunk1",
+            "principles-economics-3e-monopoly-p6-chunk5",
+            "principles-economics-3e-monopoly-p18-chunk2"
+          ],
+          "elapsed_ms": 85.11
+        },
+        "dev-5-hybrid-rerank-k4-b3600": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": true,
+          "context_chars": 3334,
+          "top1_id": "principles-economics-3e-monopoly-p18-chunk2",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p18-chunk2",
+            "principles-economics-3e-monopoly-p6-chunk5",
+            "principles-economics-3e-monopoly-p3-chunk1",
+            "principles-economics-3e-monopoly-p18-chunk0"
+          ],
+          "elapsed_ms": 84.34
+        }
+      }
+    },
+    {
+      "query_id": "Q003",
+      "question": "What conditions lead to a natural monopoly?",
+      "configs": {
+        "dev-1-baseline-tfidf": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 0,
+          "top1_id": "principles-economics-3e-monopoly-p19-chunk2",
+          "packed_ids": [],
+          "elapsed_ms": 0.55
+        },
+        "dev-2-dense-pgvector": {
+          "hit1": true,
+          "hit3": true,
+          "context_hit": false,
+          "context_chars": 0,
+          "top1_id": "principles-economics-3e-monopoly-p4-chunk0",
+          "packed_ids": [],
+          "elapsed_ms": 106.96
+        },
+        "dev-3-lexical-bm25": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 0,
+          "top1_id": "principles-economics-3e-monopoly-p19-chunk2",
+          "packed_ids": [],
+          "elapsed_ms": 1.08
+        },
+        "dev-4-hybrid-rrf-b3200": {
+          "hit1": false,
+          "hit3": true,
+          "context_hit": true,
+          "context_chars": 3009,
+          "top1_id": "principles-economics-3e-monopoly-p18-chunk2",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p18-chunk2",
+            "principles-economics-3e-monopoly-p4-chunk2",
+            "principles-economics-3e-monopoly-p4-chunk0"
+          ],
+          "elapsed_ms": 100.09
+        },
+        "dev-5-hybrid-rerank-k4-b3600": {
+          "hit1": false,
+          "hit3": true,
+          "context_hit": true,
+          "context_chars": 3011,
+          "top1_id": "principles-economics-3e-monopoly-p18-chunk2",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p18-chunk2",
+            "principles-economics-3e-monopoly-p18-chunk1",
+            "principles-economics-3e-monopoly-p4-chunk0"
+          ],
+          "elapsed_ms": 113.71
+        }
+      }
+    },
+    {
+      "query_id": "Q004",
+      "question": "In section 9.1, why were other firms unable to compete with ALCOA in aluminum in the 1930s?",
+      "configs": {
+        "dev-1-baseline-tfidf": {
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "context_chars": 700,
+          "top1_id": "principles-economics-3e-monopoly-p4-chunk3",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p4-chunk3"
+          ],
+          "elapsed_ms": 0.99
+        },
+        "dev-2-dense-pgvector": {
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "context_chars": 700,
+          "top1_id": "principles-economics-3e-monopoly-p4-chunk3",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p4-chunk3"
+          ],
+          "elapsed_ms": 97.23
+        },
+        "dev-3-lexical-bm25": {
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "context_chars": 700,
+          "top1_id": "principles-economics-3e-monopoly-p4-chunk3",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p4-chunk3"
+          ],
+          "elapsed_ms": 0.71
+        },
+        "dev-4-hybrid-rrf-b3200": {
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "context_chars": 2706,
+          "top1_id": "principles-economics-3e-monopoly-p4-chunk3",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p4-chunk3",
+            "principles-economics-3e-monopoly-p6-chunk0",
+            "principles-economics-3e-monopoly-p7-chunk0"
+          ],
+          "elapsed_ms": 96.12
+        },
+        "dev-5-hybrid-rerank-k4-b3600": {
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "context_chars": 2706,
+          "top1_id": "principles-economics-3e-monopoly-p4-chunk3",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p4-chunk3",
+            "principles-economics-3e-monopoly-p4-chunk2",
+            "principles-economics-3e-monopoly-p6-chunk0"
+          ],
+          "elapsed_ms": 118.13
+        }
+      }
+    },
+    {
+      "query_id": "Q005",
+      "question": "What do governments do to create a legal monopoly?",
+      "configs": {
+        "dev-1-baseline-tfidf": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 0,
+          "top1_id": "principles-economics-3e-monopoly-p19-chunk2",
+          "packed_ids": [],
+          "elapsed_ms": 0.57
+        },
+        "dev-2-dense-pgvector": {
+          "hit1": false,
+          "hit3": true,
+          "context_hit": false,
+          "context_chars": 0,
+          "top1_id": "principles-economics-3e-monopoly-p7-chunk0",
+          "packed_ids": [],
+          "elapsed_ms": 88.06
+        },
+        "dev-3-lexical-bm25": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 726,
+          "top1_id": "principles-economics-3e-monopoly-p3-chunk0",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p48-chunk5"
+          ],
+          "elapsed_ms": 0.98
+        },
+        "dev-4-hybrid-rrf-b3200": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 3011,
+          "top1_id": "principles-economics-3e-monopoly-p24-chunk0",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p24-chunk0",
+            "principles-economics-3e-monopoly-p32-chunk3",
+            "principles-economics-3e-monopoly-p6-chunk2"
+          ],
+          "elapsed_ms": 106.01
+        },
+        "dev-5-hybrid-rerank-k4-b3600": {
+          "hit1": false,
+          "hit3": true,
+          "context_hit": true,
+          "context_chars": 3011,
+          "top1_id": "principles-economics-3e-monopoly-p48-chunk0",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p48-chunk0",
+            "principles-economics-3e-monopoly-p32-chunk3",
+            "principles-economics-3e-monopoly-p5-chunk0"
+          ],
+          "elapsed_ms": 91.33
+        }
+      }
+    },
+    {
+      "query_id": "Q006",
+      "question": "How do patents let innovative firms recover their research and development costs?",
+      "configs": {
+        "dev-1-baseline-tfidf": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 0,
+          "top1_id": "principles-economics-3e-monopoly-p5-chunk1",
+          "packed_ids": [],
+          "elapsed_ms": 0.71
+        },
+        "dev-2-dense-pgvector": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 0,
+          "top1_id": "principles-economics-3e-monopoly-p5-chunk1",
+          "packed_ids": [],
+          "elapsed_ms": 95.79
+        },
+        "dev-3-lexical-bm25": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 0,
+          "top1_id": "principles-economics-3e-monopoly-p5-chunk1",
+          "packed_ids": [],
+          "elapsed_ms": 1.04
+        },
+        "dev-4-hybrid-rrf-b3200": {
+          "hit1": false,
+          "hit3": true,
+          "context_hit": true,
+          "context_chars": 3007,
+          "top1_id": "principles-economics-3e-monopoly-p5-chunk1",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p5-chunk1",
+            "principles-economics-3e-monopoly-p5-chunk2",
+            "principles-economics-3e-monopoly-p5-chunk4"
+          ],
+          "elapsed_ms": 109.56
+        },
+        "dev-5-hybrid-rerank-k4-b3600": {
+          "hit1": false,
+          "hit3": true,
+          "context_hit": true,
+          "context_chars": 3009,
+          "top1_id": "principles-economics-3e-monopoly-p5-chunk1",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p5-chunk1",
+            "principles-economics-3e-monopoly-p5-chunk2",
+            "principles-economics-3e-monopoly-p39-chunk1"
+          ],
+          "elapsed_ms": 97.64
+        }
+      }
+    },
+    {
+      "query_id": "Q007",
+      "question": "What is predatory pricing?",
+      "configs": {
+        "dev-1-baseline-tfidf": {
+          "hit1": true,
+          "hit3": true,
+          "context_hit": false,
+          "context_chars": 0,
+          "top1_id": "principles-economics-3e-monopoly-p6-chunk2",
+          "packed_ids": [],
+          "elapsed_ms": 0.39
+        },
+        "dev-2-dense-pgvector": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 0,
+          "top1_id": "principles-economics-3e-monopoly-p14-chunk2",
+          "packed_ids": [],
+          "elapsed_ms": 102.92
+        },
+        "dev-3-lexical-bm25": {
+          "hit1": true,
+          "hit3": true,
+          "context_hit": false,
+          "context_chars": 0,
+          "top1_id": "principles-economics-3e-monopoly-p6-chunk2",
+          "packed_ids": [],
+          "elapsed_ms": 0.57
+        },
+        "dev-4-hybrid-rrf-b3200": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 3013,
+          "top1_id": "principles-economics-3e-monopoly-p14-chunk2",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p14-chunk2",
+            "principles-economics-3e-monopoly-p24-chunk1",
+            "principles-economics-3e-monopoly-p37-chunk1"
+          ],
+          "elapsed_ms": 81.71
+        },
+        "dev-5-hybrid-rerank-k4-b3600": {
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "context_chars": 3009,
+          "top1_id": "principles-economics-3e-monopoly-p18-chunk1",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p18-chunk1",
+            "principles-economics-3e-monopoly-p7-chunk0",
+            "principles-economics-3e-monopoly-p6-chunk2"
+          ],
+          "elapsed_ms": 97.01
+        }
+      }
+    },
+    {
+      "query_id": "Q008",
+      "question": "What demand curve does a monopolist face?",
+      "configs": {
+        "dev-1-baseline-tfidf": {
+          "hit1": false,
+          "hit3": true,
+          "context_hit": false,
+          "context_chars": 566,
+          "top1_id": "principles-economics-3e-monopoly-p19-chunk3",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p19-chunk3"
+          ],
+          "elapsed_ms": 0.52
+        },
+        "dev-2-dense-pgvector": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 0,
+          "top1_id": "principles-economics-3e-monopoly-p9-chunk2",
+          "packed_ids": [],
+          "elapsed_ms": 130.11
+        },
+        "dev-3-lexical-bm25": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 566,
+          "top1_id": "principles-economics-3e-monopoly-p19-chunk3",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p19-chunk3"
+          ],
+          "elapsed_ms": 0.83
+        },
+        "dev-4-hybrid-rrf-b3200": {
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "context_chars": 3009,
+          "top1_id": "principles-economics-3e-monopoly-p8-chunk0",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p8-chunk0",
+            "principles-economics-3e-monopoly-p29-chunk0",
+            "principles-economics-3e-monopoly-p9-chunk1"
+          ],
+          "elapsed_ms": 85.26
+        },
+        "dev-5-hybrid-rerank-k4-b3600": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 3011,
+          "top1_id": "principles-economics-3e-monopoly-p29-chunk0",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p29-chunk0",
+            "principles-economics-3e-monopoly-p9-chunk1",
+            "principles-economics-3e-monopoly-p26-chunk1"
+          ],
+          "elapsed_ms": 88.87
+        }
+      }
+    },
+    {
+      "query_id": "Q009",
+      "question": "Why does total revenue for a monopolist first rise and then fall as it sells more output?",
+      "configs": {
+        "dev-1-baseline-tfidf": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 0,
+          "top1_id": "principles-economics-3e-monopoly-p18-chunk3",
+          "packed_ids": [],
+          "elapsed_ms": 0.9
+        },
+        "dev-2-dense-pgvector": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 0,
+          "top1_id": "principles-economics-3e-monopoly-p11-chunk0",
+          "packed_ids": [],
+          "elapsed_ms": 96.93
+        },
+        "dev-3-lexical-bm25": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 0,
+          "top1_id": "principles-economics-3e-monopoly-p18-chunk3",
+          "packed_ids": [],
+          "elapsed_ms": 3.23
+        },
+        "dev-4-hybrid-rrf-b3200": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 3013,
+          "top1_id": "principles-economics-3e-monopoly-p11-chunk0",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p11-chunk0",
+            "principles-economics-3e-monopoly-p18-chunk3",
+            "principles-economics-3e-monopoly-p10-chunk2"
+          ],
+          "elapsed_ms": 108.37
+        },
+        "dev-5-hybrid-rerank-k4-b3600": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 3011,
+          "top1_id": "principles-economics-3e-monopoly-p18-chunk3",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p18-chunk3",
+            "principles-economics-3e-monopoly-p11-chunk0",
+            "principles-economics-3e-monopoly-p9-chunk2"
+          ],
+          "elapsed_ms": 95.54
+        }
+      }
+    },
+    {
+      "query_id": "Q010",
+      "question": "Why is a monopolist's marginal revenue less than the price of the unit it sells?",
+      "configs": {
+        "dev-1-baseline-tfidf": {
+          "hit1": false,
+          "hit3": true,
+          "context_hit": true,
+          "context_chars": 757,
+          "top1_id": "principles-economics-3e-monopoly-p11-chunk0",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p15-chunk2"
+          ],
+          "elapsed_ms": 0.81
+        },
+        "dev-2-dense-pgvector": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 0,
+          "top1_id": "principles-economics-3e-monopoly-p11-chunk0",
+          "packed_ids": [],
+          "elapsed_ms": 92.61
+        },
+        "dev-3-lexical-bm25": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 0,
+          "top1_id": "principles-economics-3e-monopoly-p11-chunk0",
+          "packed_ids": [],
+          "elapsed_ms": 2.11
+        },
+        "dev-4-hybrid-rrf-b3200": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 3013,
+          "top1_id": "principles-economics-3e-monopoly-p11-chunk0",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p11-chunk0",
+            "principles-economics-3e-monopoly-p15-chunk1",
+            "principles-economics-3e-monopoly-p18-chunk3"
+          ],
+          "elapsed_ms": 93.7
+        },
+        "dev-5-hybrid-rerank-k4-b3600": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 3013,
+          "top1_id": "principles-economics-3e-monopoly-p15-chunk1",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p15-chunk1",
+            "principles-economics-3e-monopoly-p11-chunk0",
+            "principles-economics-3e-monopoly-p18-chunk3"
+          ],
+          "elapsed_ms": 92.43
+        }
+      }
+    },
+    {
+      "query_id": "Q011",
+      "question": "In section 9.2, what rule does a profit-maximizing monopoly follow to choose its quantity of output?",
+      "configs": {
+        "dev-1-baseline-tfidf": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 0,
+          "top1_id": "principles-economics-3e-monopoly-p7-chunk0",
+          "packed_ids": [],
+          "elapsed_ms": 0.91
+        },
+        "dev-2-dense-pgvector": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 0,
+          "top1_id": "principles-economics-3e-monopoly-p11-chunk0",
+          "packed_ids": [],
+          "elapsed_ms": 109.81
+        },
+        "dev-3-lexical-bm25": {
+          "hit1": true,
+          "hit3": true,
+          "context_hit": false,
+          "context_chars": 0,
+          "top1_id": "principles-economics-3e-monopoly-p12-chunk1",
+          "packed_ids": [],
+          "elapsed_ms": 1.11
+        },
+        "dev-4-hybrid-rrf-b3200": {
+          "hit1": false,
+          "hit3": true,
+          "context_hit": true,
+          "context_chars": 3013,
+          "top1_id": "principles-economics-3e-monopoly-p12-chunk0",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p12-chunk0",
+            "principles-economics-3e-monopoly-p12-chunk1",
+            "principles-economics-3e-monopoly-p15-chunk0"
+          ],
+          "elapsed_ms": 104.79
+        },
+        "dev-5-hybrid-rerank-k4-b3600": {
+          "hit1": false,
+          "hit3": true,
+          "context_hit": true,
+          "context_chars": 3011,
+          "top1_id": "principles-economics-3e-monopoly-p12-chunk0",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p12-chunk0",
+            "principles-economics-3e-monopoly-p12-chunk1",
+            "principles-economics-3e-monopoly-p9-chunk0"
+          ],
+          "elapsed_ms": 94.6
+        }
+      }
+    },
+    {
+      "query_id": "Q012",
+      "question": "Once a monopolist has chosen its output, how does it decide what price to charge?",
+      "configs": {
+        "dev-1-baseline-tfidf": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 0,
+          "top1_id": "principles-economics-3e-monopoly-p20-chunk0",
+          "packed_ids": [],
+          "elapsed_ms": 0.77
+        },
+        "dev-2-dense-pgvector": {
+          "hit1": false,
+          "hit3": true,
+          "context_hit": false,
+          "context_chars": 0,
+          "top1_id": "principles-economics-3e-monopoly-p18-chunk3",
+          "packed_ids": [],
+          "elapsed_ms": 106.98
+        },
+        "dev-3-lexical-bm25": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 0,
+          "top1_id": "principles-economics-3e-monopoly-p20-chunk0",
+          "packed_ids": [],
+          "elapsed_ms": 1.31
+        },
+        "dev-4-hybrid-rrf-b3200": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 3013,
+          "top1_id": "principles-economics-3e-monopoly-p18-chunk3",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p18-chunk3",
+            "principles-economics-3e-monopoly-p28-chunk3",
+            "principles-economics-3e-monopoly-p10-chunk2"
+          ],
+          "elapsed_ms": 317.54
+        },
+        "dev-5-hybrid-rerank-k4-b3600": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 3013,
+          "top1_id": "principles-economics-3e-monopoly-p28-chunk3",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p28-chunk3",
+            "principles-economics-3e-monopoly-p20-chunk0",
+            "principles-economics-3e-monopoly-p18-chunk3"
+          ],
+          "elapsed_ms": 106.24
+        }
+      }
+    },
+    {
+      "query_id": "Q013",
+      "question": "Why is a monopoly considered allocatively inefficient?",
+      "configs": {
+        "dev-1-baseline-tfidf": {
+          "hit1": true,
+          "hit3": true,
+          "context_hit": false,
+          "context_chars": 0,
+          "top1_id": "principles-economics-3e-monopoly-p16-chunk0",
+          "packed_ids": [],
+          "elapsed_ms": 0.45
+        },
+        "dev-2-dense-pgvector": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 437,
+          "top1_id": "principles-economics-3e-monopoly-p16-chunk2",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p2-chunk5"
+          ],
+          "elapsed_ms": 83.86
+        },
+        "dev-3-lexical-bm25": {
+          "hit1": true,
+          "hit3": true,
+          "context_hit": false,
+          "context_chars": 0,
+          "top1_id": "principles-economics-3e-monopoly-p16-chunk0",
+          "packed_ids": [],
+          "elapsed_ms": 0.66
+        },
+        "dev-4-hybrid-rrf-b3200": {
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "context_chars": 2768,
+          "top1_id": "principles-economics-3e-monopoly-p18-chunk4",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p18-chunk4",
+            "principles-economics-3e-monopoly-p24-chunk0",
+            "principles-economics-3e-monopoly-p30-chunk5"
+          ],
+          "elapsed_ms": 94.64
+        },
+        "dev-5-hybrid-rerank-k4-b3600": {
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "context_chars": 2893,
+          "top1_id": "principles-economics-3e-monopoly-p16-chunk0",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p16-chunk0",
+            "principles-economics-3e-monopoly-p18-chunk4",
+            "principles-economics-3e-monopoly-p24-chunk0"
+          ],
+          "elapsed_ms": 104.37
+        }
+      }
+    },
+    {
+      "query_id": "Q014",
+      "question": "In what ways can a firm make its products different from those of its competitors?",
+      "configs": {
+        "dev-1-baseline-tfidf": {
+          "hit1": true,
+          "hit3": true,
+          "context_hit": false,
+          "context_chars": 437,
+          "top1_id": "principles-economics-3e-monopoly-p25-chunk1",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p2-chunk5"
+          ],
+          "elapsed_ms": 1.35
+        },
+        "dev-2-dense-pgvector": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 0,
+          "top1_id": "principles-economics-3e-monopoly-p48-chunk2",
+          "packed_ids": [],
+          "elapsed_ms": 103.04
+        },
+        "dev-3-lexical-bm25": {
+          "hit1": true,
+          "hit3": true,
+          "context_hit": false,
+          "context_chars": 0,
+          "top1_id": "principles-economics-3e-monopoly-p25-chunk1",
+          "packed_ids": [],
+          "elapsed_ms": 1.16
+        },
+        "dev-4-hybrid-rrf-b3200": {
+          "hit1": false,
+          "hit3": true,
+          "context_hit": true,
+          "context_chars": 2745,
+          "top1_id": "principles-economics-3e-monopoly-p39-chunk1",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p39-chunk1",
+            "principles-economics-3e-monopoly-p25-chunk1",
+            "principles-economics-3e-monopoly-p31-chunk5"
+          ],
+          "elapsed_ms": 114.81
+        },
+        "dev-5-hybrid-rerank-k4-b3600": {
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "context_chars": 3184,
+          "top1_id": "principles-economics-3e-monopoly-p25-chunk1",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p25-chunk1",
+            "principles-economics-3e-monopoly-p39-chunk1",
+            "principles-economics-3e-monopoly-p31-chunk5",
+            "principles-economics-3e-monopoly-p2-chunk5"
+          ],
+          "elapsed_ms": 96.67
+        }
+      }
+    },
+    {
+      "query_id": "Q015",
+      "question": "What characterizes monopolistic competition?",
+      "configs": {
+        "dev-1-baseline-tfidf": {
+          "hit1": true,
+          "hit3": true,
+          "context_hit": false,
+          "context_chars": 0,
+          "top1_id": "principles-economics-3e-monopoly-p24-chunk4",
+          "packed_ids": [],
+          "elapsed_ms": 3.13
+        },
+        "dev-2-dense-pgvector": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 0,
+          "top1_id": "principles-economics-3e-monopoly-p37-chunk2",
+          "packed_ids": [],
+          "elapsed_ms": 84.08
+        },
+        "dev-3-lexical-bm25": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 0,
+          "top1_id": "principles-economics-3e-monopoly-p32-chunk3",
+          "packed_ids": [],
+          "elapsed_ms": 0.48
+        },
+        "dev-4-hybrid-rrf-b3200": {
+          "hit1": false,
+          "hit3": true,
+          "context_hit": true,
+          "context_chars": 3013,
+          "top1_id": "principles-economics-3e-monopoly-p32-chunk3",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p32-chunk3",
+            "principles-economics-3e-monopoly-p24-chunk4",
+            "principles-economics-3e-monopoly-p25-chunk0"
+          ],
+          "elapsed_ms": 100.47
+        },
+        "dev-5-hybrid-rerank-k4-b3600": {
+          "hit1": false,
+          "hit3": true,
+          "context_hit": true,
+          "context_chars": 3013,
+          "top1_id": "principles-economics-3e-monopoly-p32-chunk3",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p32-chunk3",
+            "principles-economics-3e-monopoly-p32-chunk2",
+            "principles-economics-3e-monopoly-p24-chunk4"
+          ],
+          "elapsed_ms": 86.21
+        }
+      }
+    },
+    {
+      "query_id": "Q016",
+      "question": "How does the demand curve facing a monopolistically competitive firm compare with that of a monopoly in terms of elasticity?",
+      "configs": {
+        "dev-1-baseline-tfidf": {
+          "hit1": false,
+          "hit3": true,
+          "context_hit": false,
+          "context_chars": 566,
+          "top1_id": "principles-economics-3e-monopoly-p19-chunk3",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p19-chunk3"
+          ],
+          "elapsed_ms": 1.73
+        },
+        "dev-2-dense-pgvector": {
+          "hit1": true,
+          "hit3": true,
+          "context_hit": false,
+          "context_chars": 0,
+          "top1_id": "principles-economics-3e-monopoly-p26-chunk0",
+          "packed_ids": [],
+          "elapsed_ms": 88.71
+        },
+        "dev-3-lexical-bm25": {
+          "hit1": false,
+          "hit3": true,
+          "context_hit": false,
+          "context_chars": 566,
+          "top1_id": "principles-economics-3e-monopoly-p19-chunk3",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p19-chunk3"
+          ],
+          "elapsed_ms": 1.44
+        },
+        "dev-4-hybrid-rrf-b3200": {
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "context_chars": 3013,
+          "top1_id": "principles-economics-3e-monopoly-p26-chunk0",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p26-chunk0",
+            "principles-economics-3e-monopoly-p26-chunk1",
+            "principles-economics-3e-monopoly-p41-chunk0"
+          ],
+          "elapsed_ms": 100.39
+        },
+        "dev-5-hybrid-rerank-k4-b3600": {
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "context_chars": 3013,
+          "top1_id": "principles-economics-3e-monopoly-p26-chunk0",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p26-chunk0",
+            "principles-economics-3e-monopoly-p26-chunk1",
+            "principles-economics-3e-monopoly-p39-chunk2"
+          ],
+          "elapsed_ms": 103.09
+        }
+      }
+    },
+    {
+      "query_id": "Q017",
+      "question": "In section 10.1, what happens to monopolistically competitive firms' economic profits in the long run?",
+      "configs": {
+        "dev-1-baseline-tfidf": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 0,
+          "top1_id": "principles-economics-3e-monopoly-p30-chunk1",
+          "packed_ids": [],
+          "elapsed_ms": 1.28
+        },
+        "dev-2-dense-pgvector": {
+          "hit1": false,
+          "hit3": true,
+          "context_hit": false,
+          "context_chars": 0,
+          "top1_id": "principles-economics-3e-monopoly-p30-chunk0",
+          "packed_ids": [],
+          "elapsed_ms": 88.6
+        },
+        "dev-3-lexical-bm25": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 0,
+          "top1_id": "principles-economics-3e-monopoly-p30-chunk1",
+          "packed_ids": [],
+          "elapsed_ms": 0.67
+        },
+        "dev-4-hybrid-rrf-b3200": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 3013,
+          "top1_id": "principles-economics-3e-monopoly-p30-chunk1",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p30-chunk1",
+            "principles-economics-3e-monopoly-p30-chunk0",
+            "principles-economics-3e-monopoly-p31-chunk1"
+          ],
+          "elapsed_ms": 110.02
+        },
+        "dev-5-hybrid-rerank-k4-b3600": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 3013,
+          "top1_id": "principles-economics-3e-monopoly-p30-chunk1",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p30-chunk1",
+            "principles-economics-3e-monopoly-p31-chunk1",
+            "principles-economics-3e-monopoly-p30-chunk0"
+          ],
+          "elapsed_ms": 114.81
+        }
+      }
+    },
+    {
+      "query_id": "Q018",
+      "question": "How can a successful advertising campaign help a monopolistically competitive firm?",
+      "configs": {
+        "dev-1-baseline-tfidf": {
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "context_chars": 735,
+          "top1_id": "principles-economics-3e-monopoly-p31-chunk5",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p31-chunk5"
+          ],
+          "elapsed_ms": 0.75
+        },
+        "dev-2-dense-pgvector": {
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "context_chars": 735,
+          "top1_id": "principles-economics-3e-monopoly-p31-chunk5",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p31-chunk5"
+          ],
+          "elapsed_ms": 85.33
+        },
+        "dev-3-lexical-bm25": {
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "context_chars": 735,
+          "top1_id": "principles-economics-3e-monopoly-p31-chunk5",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p31-chunk5"
+          ],
+          "elapsed_ms": 0.75
+        },
+        "dev-4-hybrid-rrf-b3200": {
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "context_chars": 2745,
+          "top1_id": "principles-economics-3e-monopoly-p31-chunk5",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p31-chunk5",
+            "principles-economics-3e-monopoly-p25-chunk3",
+            "principles-economics-3e-monopoly-p31-chunk4"
+          ],
+          "elapsed_ms": 92.15
+        },
+        "dev-5-hybrid-rerank-k4-b3600": {
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "context_chars": 2745,
+          "top1_id": "principles-economics-3e-monopoly-p31-chunk5",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p31-chunk5",
+            "principles-economics-3e-monopoly-p25-chunk3",
+            "principles-economics-3e-monopoly-p41-chunk1"
+          ],
+          "elapsed_ms": 102.32
+        }
+      }
+    },
+    {
+      "query_id": "Q019",
+      "question": "What defines an oligopoly?",
+      "configs": {
+        "dev-1-baseline-tfidf": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 741,
+          "top1_id": "principles-economics-3e-monopoly-p36-chunk3",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p39-chunk4"
+          ],
+          "elapsed_ms": 0.4
+        },
+        "dev-2-dense-pgvector": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 0,
+          "top1_id": "principles-economics-3e-monopoly-p37-chunk3",
+          "packed_ids": [],
+          "elapsed_ms": 84.41
+        },
+        "dev-3-lexical-bm25": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 0,
+          "top1_id": "principles-economics-3e-monopoly-p36-chunk3",
+          "packed_ids": [],
+          "elapsed_ms": 0.36
+        },
+        "dev-4-hybrid-rrf-b3200": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 3013,
+          "top1_id": "principles-economics-3e-monopoly-p32-chunk3",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p32-chunk3",
+            "principles-economics-3e-monopoly-p36-chunk3",
+            "principles-economics-3e-monopoly-p39-chunk0"
+          ],
+          "elapsed_ms": 85.49
+        },
+        "dev-5-hybrid-rerank-k4-b3600": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 2751,
+          "top1_id": "principles-economics-3e-monopoly-p36-chunk3",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p36-chunk3",
+            "principles-economics-3e-monopoly-p39-chunk0",
+            "principles-economics-3e-monopoly-p39-chunk4"
+          ],
+          "elapsed_ms": 100.98
+        }
+      }
+    },
+    {
+      "query_id": "Q020",
+      "question": "What does mutual interdependence mean in an oligopoly?",
+      "configs": {
+        "dev-1-baseline-tfidf": {
+          "hit1": false,
+          "hit3": true,
+          "context_hit": false,
+          "context_chars": 159,
+          "top1_id": "principles-economics-3e-monopoly-p21-chunk0",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p21-chunk0"
+          ],
+          "elapsed_ms": 0.57
+        },
+        "dev-2-dense-pgvector": {
+          "hit1": true,
+          "hit3": true,
+          "context_hit": false,
+          "context_chars": 0,
+          "top1_id": "principles-economics-3e-monopoly-p32-chunk2",
+          "packed_ids": [],
+          "elapsed_ms": 97.28
+        },
+        "dev-3-lexical-bm25": {
+          "hit1": false,
+          "hit3": true,
+          "context_hit": false,
+          "context_chars": 159,
+          "top1_id": "principles-economics-3e-monopoly-p21-chunk0",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p21-chunk0"
+          ],
+          "elapsed_ms": 0.59
+        },
+        "dev-4-hybrid-rrf-b3200": {
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "context_chars": 3013,
+          "top1_id": "principles-economics-3e-monopoly-p32-chunk2",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p32-chunk2",
+            "principles-economics-3e-monopoly-p32-chunk3",
+            "principles-economics-3e-monopoly-p33-chunk3"
+          ],
+          "elapsed_ms": 89.82
+        },
+        "dev-5-hybrid-rerank-k4-b3600": {
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "context_chars": 3013,
+          "top1_id": "principles-economics-3e-monopoly-p32-chunk2",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p32-chunk2",
+            "principles-economics-3e-monopoly-p33-chunk3",
+            "principles-economics-3e-monopoly-p32-chunk3"
+          ],
+          "elapsed_ms": 108.72
+        }
+      }
+    },
+    {
+      "query_id": "Q021",
+      "question": "How can the relationship between market demand and economies of scale limit an oligopoly to only a few firms?",
+      "configs": {
+        "dev-1-baseline-tfidf": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 0,
+          "top1_id": "principles-economics-3e-monopoly-p3-chunk2",
+          "packed_ids": [],
+          "elapsed_ms": 1.03
+        },
+        "dev-2-dense-pgvector": {
+          "hit1": true,
+          "hit3": true,
+          "context_hit": false,
+          "context_chars": 0,
+          "top1_id": "principles-economics-3e-monopoly-p32-chunk4",
+          "packed_ids": [],
+          "elapsed_ms": 107.74
+        },
+        "dev-3-lexical-bm25": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 0,
+          "top1_id": "principles-economics-3e-monopoly-p3-chunk2",
+          "packed_ids": [],
+          "elapsed_ms": 1.31
+        },
+        "dev-4-hybrid-rrf-b3200": {
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "context_chars": 3009,
+          "top1_id": "principles-economics-3e-monopoly-p32-chunk4",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p32-chunk4",
+            "principles-economics-3e-monopoly-p3-chunk2",
+            "principles-economics-3e-monopoly-p4-chunk0"
+          ],
+          "elapsed_ms": 96.23
+        },
+        "dev-5-hybrid-rerank-k4-b3600": {
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "context_chars": 3011,
+          "top1_id": "principles-economics-3e-monopoly-p32-chunk4",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p32-chunk4",
+            "principles-economics-3e-monopoly-p3-chunk2",
+            "principles-economics-3e-monopoly-p26-chunk0"
+          ],
+          "elapsed_ms": 108.4
+        }
+      }
+    },
+    {
+      "query_id": "Q022",
+      "question": "In section 10.2, what is a cartel?",
+      "configs": {
+        "dev-1-baseline-tfidf": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 0,
+          "top1_id": "principles-economics-3e-monopoly-p40-chunk1",
+          "packed_ids": [],
+          "elapsed_ms": 0.57
+        },
+        "dev-2-dense-pgvector": {
+          "hit1": true,
+          "hit3": true,
+          "context_hit": false,
+          "context_chars": 0,
+          "top1_id": "principles-economics-3e-monopoly-p39-chunk0",
+          "packed_ids": [],
+          "elapsed_ms": 108.46
+        },
+        "dev-3-lexical-bm25": {
+          "hit1": false,
+          "hit3": false,
+          "context_hit": false,
+          "context_chars": 0,
+          "top1_id": "principles-economics-3e-monopoly-p40-chunk1",
+          "packed_ids": [],
+          "elapsed_ms": 0.51
+        },
+        "dev-4-hybrid-rrf-b3200": {
+          "hit1": false,
+          "hit3": true,
+          "context_hit": true,
+          "context_chars": 3013,
+          "top1_id": "principles-economics-3e-monopoly-p40-chunk1",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p40-chunk1",
+            "principles-economics-3e-monopoly-p37-chunk0",
+            "principles-economics-3e-monopoly-p39-chunk0"
+          ],
+          "elapsed_ms": 86.06
+        },
+        "dev-5-hybrid-rerank-k4-b3600": {
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "context_chars": 2751,
+          "top1_id": "principles-economics-3e-monopoly-p39-chunk0",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p39-chunk0",
+            "principles-economics-3e-monopoly-p40-chunk1",
+            "principles-economics-3e-monopoly-p39-chunk4"
+          ],
+          "elapsed_ms": 109.63
+        }
+      }
+    },
+    {
+      "query_id": "Q023",
+      "question": "What is game theory?",
+      "configs": {
+        "dev-1-baseline-tfidf": {
+          "hit1": true,
+          "hit3": true,
+          "context_hit": false,
+          "context_chars": 0,
+          "top1_id": "principles-economics-3e-monopoly-p33-chunk4",
+          "packed_ids": [],
+          "elapsed_ms": 0.38
+        },
+        "dev-2-dense-pgvector": {
+          "hit1": true,
+          "hit3": true,
+          "context_hit": false,
+          "context_chars": 0,
+          "top1_id": "principles-economics-3e-monopoly-p33-chunk4",
+          "packed_ids": [],
+          "elapsed_ms": 81.0
+        },
+        "dev-3-lexical-bm25": {
+          "hit1": true,
+          "hit3": true,
+          "context_hit": false,
+          "context_chars": 0,
+          "top1_id": "principles-economics-3e-monopoly-p33-chunk4",
+          "packed_ids": [],
+          "elapsed_ms": 0.41
+        },
+        "dev-4-hybrid-rrf-b3200": {
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "context_chars": 3013,
+          "top1_id": "principles-economics-3e-monopoly-p33-chunk4",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p33-chunk4",
+            "principles-economics-3e-monopoly-p40-chunk0",
+            "principles-economics-3e-monopoly-p39-chunk0"
+          ],
+          "elapsed_ms": 90.64
+        },
+        "dev-5-hybrid-rerank-k4-b3600": {
+          "hit1": true,
+          "hit3": true,
+          "context_hit": true,
+          "context_chars": 3013,
+          "top1_id": "principles-economics-3e-monopoly-p39-chunk0",
+          "packed_ids": [
+            "principles-economics-3e-monopoly-p39-chunk0",
+            "principles-economics-3e-monopoly-p40-chunk0",
+            "principles-economics-3e-monopoly-p34-chunk1"
+          ],
+          "elapsed_ms": 131.06
+        }
+      }
+    }
+  ]
+}

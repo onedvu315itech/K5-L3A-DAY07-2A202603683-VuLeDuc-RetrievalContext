@@ -1,0 +1,1139 @@
+[
+  {
+    "query_id": "Q024",
+    "split": "test",
+    "question": "What did the British Tea Act make the East India Company in the American colonies?",
+    "filter": null,
+    "strategy": "tfidf_baseline",
+    "top_k": 3,
+    "budget_chars": 800,
+    "gold": [
+      {
+        "source_id": "principles-economics-3e-monopoly",
+        "page": 1,
+        "evidence": "The act continued the tax on teas and made the East India Company the sole legal supplier of tea to the American colonies."
+      }
+    ],
+    "results_top3": [
+      {
+        "id": "principles-economics-3e-monopoly-p1-chunk1",
+        "source_id": "principles-economics-3e-monopoly",
+        "source": "..\\data\\principles-economics-3e-monopoly.pdf",
+        "page": 1,
+        "text": "nto the past to observe how monopoly, or near monopolies, have helped shape history. In spring 1773, the East India Company, a firm that, in its time, was designated “too big to fail,” was experiencing financial difficulties. To help shore up the failing firm, the British Parliament authorized the Tea Act. The act continued the tax on teas and made the East India Company the sole legal supplier of tea to the American colonies. By November, the citizens of Boston had had enough. They refused to permit the unloading of tea, citing their main complaint: “No taxation without representation.” Several newspapers, including The Massachusetts Gazette, warned arriving tea-bearing ships, “We are prepared, and shall not fail to pay them an unwelcome visit by The Mohawks.”",
+        "metadata": {
+          "is_empty": false,
+          "physical_page": 1,
+          "needs_ocr": false,
+          "headings": [
+            "9 Monopoly",
+            "Chapter Objectives In this chapter, you will learn about:",
+            "Introduction to a Monopoly",
+            "BRING IT HOME"
+          ],
+          "section_at_start": null,
+          "section_id_at_start": null
+        },
+        "score": 0.4477487446852383,
+        "strategy": "tfidf",
+        "hit": true
+      },
+      {
+        "id": "principles-economics-3e-monopoly-p17-chunk1",
+        "source_id": "principles-economics-3e-monopoly",
+        "source": "..\\data\\principles-economics-3e-monopoly.pdf",
+        "page": 17,
+        "text": " Tea Party. Regarding the cotton industry, we also know Great Britain remained neutral during the Civil War, taking neither side during the conflict.\n\nDid the monopoly nature of these business have unintended and historical consequences? Might the American Revolution have been deterred, if the East India Company had sailed the tea-bearing ships back to England? Might the southern states have made different decisions had they not been so confident “King Cotton” would force diplomatic recognition of the Confederate States of America? Of course, it is not possible to definitively answer\n\nthese questions. We cannot roll back the clock and try a different scenario. We can, however, consider the monopoly nature of these businesses and the roles they played and hypothesize about what might have occurred under different circumstances.\n\nPerhaps if there had been legal free tea trade, the colonist",
+        "metadata": {
+          "is_empty": false,
+          "physical_page": 17,
+          "needs_ocr": false,
+          "headings": [
+            "BRING IT HOME"
+          ],
+          "section_at_start": "The Inefficiency of Monopoly",
+          "section_id_at_start": "9.2"
+        },
+        "score": 0.24831228329171703,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "principles-economics-3e-monopoly-p17-chunk0",
+        "source_id": "principles-economics-3e-monopoly",
+        "source": "..\\data\\principles-economics-3e-monopoly.pdf",
+        "page": 17,
+        "text": "9.2 • How a Profit-Maximizing Monopoly Chooses Output and Price 231\n\ninternet all became available. Companies offered a wide range of payment plans, as well. It was no longer true that all phones were black. Instead, phones came in a wide variety of shapes and colors. The end of the telephone monopoly brought lower prices, a greater quantity of services, and also a wave of innovation aimed at attracting and pleasing customers.\n\nBRING IT HOME\n\nThe Rest is History In the opening case, we presented the East India Company and the Confederate States as a monopoly or near monopoly provider of a good. Nearly every American schoolchild knows the result of the “unwelcome visit” the “Mohawks” bestowed upon Boston Harbor’s tea-bearing ships—the Boston Tea Party. Regarding the cotton industry, we also know Great Britain remained neutral during the Civil War, taking neither side during the conflict.\n",
+        "metadata": {
+          "is_empty": false,
+          "physical_page": 17,
+          "needs_ocr": false,
+          "headings": [
+            "BRING IT HOME"
+          ],
+          "section_at_start": "The Inefficiency of Monopoly",
+          "section_id_at_start": "9.2"
+        },
+        "score": 0.2077990060928218,
+        "strategy": "tfidf",
+        "hit": false
+      }
+    ],
+    "results": [
+      {
+        "id": "principles-economics-3e-monopoly-p1-chunk1",
+        "source_id": "principles-economics-3e-monopoly",
+        "source": "..\\data\\principles-economics-3e-monopoly.pdf",
+        "page": 1,
+        "text": "nto the past to observe how monopoly, or near monopolies, have helped shape history. In spring 1773, the East India Company, a firm that, in its time, was designated “too big to fail,” was experiencing financial difficulties. To help shore up the failing firm, the British Parliament authorized the Tea Act. The act continued the tax on teas and made the East India Company the sole legal supplier of tea to the American colonies. By November, the citizens of Boston had had enough. They refused to permit the unloading of tea, citing their main complaint: “No taxation without representation.” Several newspapers, including The Massachusetts Gazette, warned arriving tea-bearing ships, “We are prepared, and shall not fail to pay them an unwelcome visit by The Mohawks.”",
+        "metadata": {
+          "is_empty": false,
+          "physical_page": 1,
+          "needs_ocr": false,
+          "headings": [
+            "9 Monopoly",
+            "Chapter Objectives In this chapter, you will learn about:",
+            "Introduction to a Monopoly",
+            "BRING IT HOME"
+          ],
+          "section_at_start": null,
+          "section_id_at_start": null
+        },
+        "score": 0.4477487446852383,
+        "strategy": "tfidf",
+        "hit": true
+      },
+      {
+        "id": "principles-economics-3e-monopoly-p17-chunk1",
+        "source_id": "principles-economics-3e-monopoly",
+        "source": "..\\data\\principles-economics-3e-monopoly.pdf",
+        "page": 17,
+        "text": " Tea Party. Regarding the cotton industry, we also know Great Britain remained neutral during the Civil War, taking neither side during the conflict.\n\nDid the monopoly nature of these business have unintended and historical consequences? Might the American Revolution have been deterred, if the East India Company had sailed the tea-bearing ships back to England? Might the southern states have made different decisions had they not been so confident “King Cotton” would force diplomatic recognition of the Confederate States of America? Of course, it is not possible to definitively answer\n\nthese questions. We cannot roll back the clock and try a different scenario. We can, however, consider the monopoly nature of these businesses and the roles they played and hypothesize about what might have occurred under different circumstances.\n\nPerhaps if there had been legal free tea trade, the colonist",
+        "metadata": {
+          "is_empty": false,
+          "physical_page": 17,
+          "needs_ocr": false,
+          "headings": [
+            "BRING IT HOME"
+          ],
+          "section_at_start": "The Inefficiency of Monopoly",
+          "section_id_at_start": "9.2"
+        },
+        "score": 0.24831228329171703,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "principles-economics-3e-monopoly-p17-chunk0",
+        "source_id": "principles-economics-3e-monopoly",
+        "source": "..\\data\\principles-economics-3e-monopoly.pdf",
+        "page": 17,
+        "text": "9.2 • How a Profit-Maximizing Monopoly Chooses Output and Price 231\n\ninternet all became available. Companies offered a wide range of payment plans, as well. It was no longer true that all phones were black. Instead, phones came in a wide variety of shapes and colors. The end of the telephone monopoly brought lower prices, a greater quantity of services, and also a wave of innovation aimed at attracting and pleasing customers.\n\nBRING IT HOME\n\nThe Rest is History In the opening case, we presented the East India Company and the Confederate States as a monopoly or near monopoly provider of a good. Nearly every American schoolchild knows the result of the “unwelcome visit” the “Mohawks” bestowed upon Boston Harbor’s tea-bearing ships—the Boston Tea Party. Regarding the cotton industry, we also know Great Britain remained neutral during the Civil War, taking neither side during the conflict.\n",
+        "metadata": {
+          "is_empty": false,
+          "physical_page": 17,
+          "needs_ocr": false,
+          "headings": [
+            "BRING IT HOME"
+          ],
+          "section_at_start": "The Inefficiency of Monopoly",
+          "section_id_at_start": "9.2"
+        },
+        "score": 0.2077990060928218,
+        "strategy": "tfidf",
+        "hit": false
+      }
+    ],
+    "context": "",
+    "context_ids": [],
+    "context_chars": 0,
+    "elapsed_ms": 1.418200001353398,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": false
+  },
+  {
+    "query_id": "Q025",
+    "split": "test",
+    "question": "What is the key difference between marginal revenue for a perfectly competitive firm and for a monopolist?",
+    "filter": null,
+    "strategy": "tfidf_baseline",
+    "top_k": 3,
+    "budget_chars": 800,
+    "gold": [
+      {
+        "source_id": "principles-economics-3e-monopoly",
+        "page": 13,
+        "evidence": "in the case of perfect competition, marginal revenue is equal to price (MR = P), while for a monopolist, marginal revenue is not equal to the price"
+      }
+    ],
+    "results_top3": [
+      {
+        "id": "principles-economics-3e-monopoly-p13-chunk1",
+        "source_id": "principles-economics-3e-monopoly",
+        "source": "..\\data\\principles-economics-3e-monopoly.pdf",
+        "page": 13,
+        "text": "t will decrease total profits. Total profit is maximized where marginal revenue equals marginal cost. In this example, maximum profit occurs at 5 units of output.\n\nA perfectly competitive firm will also find its profit-maximizing level of output where MR = MC. The key difference with a perfectly competitive firm is that in the case of perfect competition, marginal revenue is equal to price (MR = P), while for a monopolist, marginal revenue is not equal to the price, because changes in quantity of output affect the price.\n\nIllustrating Monopoly Profits\n\nIt is straightforward to calculate profits of given numbers for total revenue and total cost. However, the size of monopoly profits can also be illustrated graphically with Figure 9.6, which takes the marginal cost and marginal revenue curves from the previous exhibit and adds an average cost curve and the monopolist’s perceived demand cur",
+        "metadata": {
+          "is_empty": false,
+          "physical_page": 13,
+          "needs_ocr": false,
+          "headings": [
+            "Quantity",
+            "Marginal Revenue",
+            "Marginal Cost",
+            "Marginal Profit",
+            "Total Profit",
+            "Q",
+            "MR",
+            "MC",
+            "MP",
+            "P",
+            "Illustrating Monopoly Profits",
+            "Quantity",
+            "Demand",
+            "Marginal Revenue",
+            "Marginal Cost",
+            "Average Cost",
+            "Q",
+            "P",
+            "MR",
+            "MC",
+            "AC",
+            "TABLE 9.5"
+          ],
+          "section_at_start": "P",
+          "section_id_at_start": "9.2"
+        },
+        "score": 0.4154168348268482,
+        "strategy": "tfidf",
+        "hit": true
+      },
+      {
+        "id": "principles-economics-3e-monopoly-p9-chunk1",
+        "source_id": "principles-economics-3e-monopoly",
+        "source": "..\\data\\principles-economics-3e-monopoly.pdf",
+        "page": 9,
+        "text": "much revenue either. The challenge for the monopolist is to strike a profit-maximizing balance between the price it charges and the quantity that it sells. However, why isn’t the perfectly competitive firm’s demand curve also the market demand curve? See the following Clear It Up feature for the answer to this question.\n\nCLEAR IT UP\n\nWhat is the difference between perceived demand and market demand? The demand curve as perceived by a perfectly competitive firm is not the overall market demand curve for that product. However, the firm’s demand curve as perceived by a monopoly is the same as the market demand curve.\n\nThe reason for the difference is that each perfectly competitive firm perceives the demand for its products in a market that includes many other firms. In effect, the demand curve perceived by a perfectly competitive firm is a tiny slice of the entire market demand curve. In c",
+        "metadata": {
+          "is_empty": false,
+          "physical_page": 9,
+          "needs_ocr": false,
+          "headings": [
+            "CLEAR IT UP",
+            "Total Cost and Total Revenue for a Monopolist"
+          ],
+          "section_at_start": "CLEAR IT UP",
+          "section_id_at_start": "9.2"
+        },
+        "score": 0.38262760045236155,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "principles-economics-3e-monopoly-p19-chunk3",
+        "source_id": "principles-economics-3e-monopoly",
+        "source": "..\\data\\principles-economics-3e-monopoly.pdf",
+        "page": 19,
+        "text": "ral monopoly “natural”?\n\n15 . How is the demand curve perceived by a perfectly competitive firm different from the demand curve perceived by a monopolist?\n\n16 . How does the demand curve perceived by a monopolist compare with the market demand curve?\n\n17 . Is a monopolist a price taker? Explain briefly.\n\n18 . What is the usual shape of a total revenue curve for a monopolist? Why?\n\n19 . What is the usual shape of a marginal revenue curve for a monopolist? Why?",
+        "metadata": {
+          "is_empty": false,
+          "physical_page": 19,
+          "needs_ocr": false,
+          "headings": [
+            "Self-Check Questions",
+            "Review Questions"
+          ],
+          "section_at_start": "9.2 How a Profit-Maximizing Monopoly Chooses Output and Price",
+          "section_id_at_start": "9.2"
+        },
+        "score": 0.3295524834744212,
+        "strategy": "tfidf",
+        "hit": false
+      }
+    ],
+    "results": [
+      {
+        "id": "principles-economics-3e-monopoly-p13-chunk1",
+        "source_id": "principles-economics-3e-monopoly",
+        "source": "..\\data\\principles-economics-3e-monopoly.pdf",
+        "page": 13,
+        "text": "t will decrease total profits. Total profit is maximized where marginal revenue equals marginal cost. In this example, maximum profit occurs at 5 units of output.\n\nA perfectly competitive firm will also find its profit-maximizing level of output where MR = MC. The key difference with a perfectly competitive firm is that in the case of perfect competition, marginal revenue is equal to price (MR = P), while for a monopolist, marginal revenue is not equal to the price, because changes in quantity of output affect the price.\n\nIllustrating Monopoly Profits\n\nIt is straightforward to calculate profits of given numbers for total revenue and total cost. However, the size of monopoly profits can also be illustrated graphically with Figure 9.6, which takes the marginal cost and marginal revenue curves from the previous exhibit and adds an average cost curve and the monopolist’s perceived demand cur",
+        "metadata": {
+          "is_empty": false,
+          "physical_page": 13,
+          "needs_ocr": false,
+          "headings": [
+            "Quantity",
+            "Marginal Revenue",
+            "Marginal Cost",
+            "Marginal Profit",
+            "Total Profit",
+            "Q",
+            "MR",
+            "MC",
+            "MP",
+            "P",
+            "Illustrating Monopoly Profits",
+            "Quantity",
+            "Demand",
+            "Marginal Revenue",
+            "Marginal Cost",
+            "Average Cost",
+            "Q",
+            "P",
+            "MR",
+            "MC",
+            "AC",
+            "TABLE 9.5"
+          ],
+          "section_at_start": "P",
+          "section_id_at_start": "9.2"
+        },
+        "score": 0.4154168348268482,
+        "strategy": "tfidf",
+        "hit": true
+      },
+      {
+        "id": "principles-economics-3e-monopoly-p9-chunk1",
+        "source_id": "principles-economics-3e-monopoly",
+        "source": "..\\data\\principles-economics-3e-monopoly.pdf",
+        "page": 9,
+        "text": "much revenue either. The challenge for the monopolist is to strike a profit-maximizing balance between the price it charges and the quantity that it sells. However, why isn’t the perfectly competitive firm’s demand curve also the market demand curve? See the following Clear It Up feature for the answer to this question.\n\nCLEAR IT UP\n\nWhat is the difference between perceived demand and market demand? The demand curve as perceived by a perfectly competitive firm is not the overall market demand curve for that product. However, the firm’s demand curve as perceived by a monopoly is the same as the market demand curve.\n\nThe reason for the difference is that each perfectly competitive firm perceives the demand for its products in a market that includes many other firms. In effect, the demand curve perceived by a perfectly competitive firm is a tiny slice of the entire market demand curve. In c",
+        "metadata": {
+          "is_empty": false,
+          "physical_page": 9,
+          "needs_ocr": false,
+          "headings": [
+            "CLEAR IT UP",
+            "Total Cost and Total Revenue for a Monopolist"
+          ],
+          "section_at_start": "CLEAR IT UP",
+          "section_id_at_start": "9.2"
+        },
+        "score": 0.38262760045236155,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "principles-economics-3e-monopoly-p19-chunk3",
+        "source_id": "principles-economics-3e-monopoly",
+        "source": "..\\data\\principles-economics-3e-monopoly.pdf",
+        "page": 19,
+        "text": "ral monopoly “natural”?\n\n15 . How is the demand curve perceived by a perfectly competitive firm different from the demand curve perceived by a monopolist?\n\n16 . How does the demand curve perceived by a monopolist compare with the market demand curve?\n\n17 . Is a monopolist a price taker? Explain briefly.\n\n18 . What is the usual shape of a total revenue curve for a monopolist? Why?\n\n19 . What is the usual shape of a marginal revenue curve for a monopolist? Why?",
+        "metadata": {
+          "is_empty": false,
+          "physical_page": 19,
+          "needs_ocr": false,
+          "headings": [
+            "Self-Check Questions",
+            "Review Questions"
+          ],
+          "section_at_start": "9.2 How a Profit-Maximizing Monopoly Chooses Output and Price",
+          "section_id_at_start": "9.2"
+        },
+        "score": 0.3295524834744212,
+        "strategy": "tfidf",
+        "hit": false
+      }
+    ],
+    "context": "[principles-economics-3e-monopoly-p19-chunk3 | ..\\data\\principles-economics-3e-monopoly.pdf | page 19]\nral monopoly “natural”?\n\n15 . How is the demand curve perceived by a perfectly competitive firm different from the demand curve perceived by a monopolist?\n\n16 . How does the demand curve perceived by a monopolist compare with the market demand curve?\n\n17 . Is a monopolist a price taker? Explain briefly.\n\n18 . What is the usual shape of a total revenue curve for a monopolist? Why?\n\n19 . What is the usual shape of a marginal revenue curve for a monopolist? Why?",
+    "context_ids": [
+      "principles-economics-3e-monopoly-p19-chunk3"
+    ],
+    "context_chars": 566,
+    "elapsed_ms": 1.59420000272803,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": false
+  },
+  {
+    "query_id": "Q026",
+    "split": "test",
+    "question": "In section 9.1, why can one producer serve the market more efficiently than several smaller natural-monopoly utilities?",
+    "filter": {
+      "section_id": "9.1"
+    },
+    "strategy": "tfidf_baseline",
+    "top_k": 3,
+    "budget_chars": 800,
+    "gold": [
+      {
+        "source_id": "principles-economics-3e-monopoly",
+        "page": 4,
+        "evidence": "because of economies of scale, one producer can serve the entire market more efficiently than a number of smaller producers that would need to make duplicate physical capital investments"
+      }
+    ],
+    "results_top3": [
+      {
+        "id": "principles-economics-3e-monopoly-p4-chunk1",
+        "source_id": "principles-economics-3e-monopoly",
+        "source": "..\\data\\principles-economics-3e-monopoly.pdf",
+        "page": 4,
+        "text": "y lays the main water pipes through a neighborhood, the marginal cost of providing water service to another home is fairly low. Once the electric company installs lines in a new subdivision, the marginal cost of providing additional electrical service to one more home is minimal. It would be costly and duplicative for a second water company to enter the market and invest in a whole second set of main water pipes, or for a second electricity company to enter the market and invest in a whole new set of electrical wires. These industries offer an example where, because of economies of scale, one producer can serve the entire market more efficiently than a number of smaller producers that would need to make duplicate physical capital investments.\n\nA natural monopoly can also arise in smaller local markets for products that are difficult to transport. For example, cement production exhibits e",
+        "metadata": {
+          "is_empty": false,
+          "physical_page": 4,
+          "needs_ocr": false,
+          "headings": [
+            "Control of a Physical Resource"
+          ],
+          "section_at_start": "Natural Monopoly",
+          "section_id_at_start": "9.1"
+        },
+        "score": 0.21584786984421764,
+        "strategy": "tfidf",
+        "hit": true
+      },
+      {
+        "id": "principles-economics-3e-monopoly-p45-chunk0",
+        "source_id": "principles-economics-3e-monopoly",
+        "source": "..\\data\\principles-economics-3e-monopoly.pdf",
+        "page": 45,
+        "text": "11 Monopoly and Antitrust Policy\n\nFIGURE 11.1 Oligopoly versus Competitors in the Marketplace Large corporations, such as the natural gas\n\nproducer Kinder Morgan, can bring economies of scale to the marketplace. Will that benefit consumers, or is more competition better? (Credit: modification of “Aerial view of Kinder Morgan Brisbane Terminal” by Chiara Coetzee/ Flickr Creative Commons, Public Domain)\n\nChapter Objectives In this chapter, you will learn about:\n\n• Corporate Mergers • Regulating Anticompetitive Behavior • Regulating Natural Monopolies • The Great Deregulation Experiment\n\nIntroduction to Monopoly and Antitrust Policy\n\nBRING IT HOME\n\nMore than Cooking, Heating, and Cooling If you live in the United States, there is a slightly better than 50–50 chance your home is heated and cooled using natural gas. You may even use natural gas for cooking. However, those uses are not the pri",
+        "metadata": {
+          "is_empty": false,
+          "physical_page": 45,
+          "needs_ocr": false,
+          "headings": [
+            "11 Monopoly and Antitrust Policy",
+            "Chapter Objectives In this chapter, you will learn about:",
+            "Introduction to Monopoly and Antitrust Policy",
+            "BRING IT HOME"
+          ],
+          "section_at_start": "TABLE 10.7",
+          "section_id_at_start": "10.2"
+        },
+        "score": 0.14870180504505726,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "principles-economics-3e-monopoly-p3-chunk0",
+        "source_id": "principles-economics-3e-monopoly",
+        "source": "..\\data\\principles-economics-3e-monopoly.pdf",
+        "page": 3,
+        "text": "9.1 • How Monopolies Form: Barriers to Entry 217\n\n9.1 How Monopolies Form: Barriers to Entry\n\nLEARNING OBJECTIVES\n\nBy the end of this section, you will be able to:\n\n• Distinguish between a natural monopoly and a legal monopoly. • Explain how economies of scale and the control of natural resources led to the necessary formation of legal monopolies • Analyze the importance of trademarks and patents in promoting innovation • Identify examples of predatory pricing\n\nBecause of the lack of competition, monopolies tend to earn significant economic profits. These profits should attract vigorous competition as we described in Perfect Competition, and yet, because of one particular characteristic of monopoly, they do not. Barriers to entry are the legal, technological, or market forces that discourage or prevent potential competitors from entering a market. Barriers to entry can range from the sim",
+        "metadata": {
+          "is_empty": false,
+          "physical_page": 3,
+          "needs_ocr": false,
+          "headings": [
+            "9.1 How Monopolies Form: Barriers to Entry",
+            "LEARNING OBJECTIVES",
+            "Natural Monopoly"
+          ],
+          "section_at_start": "BRING IT HOME",
+          "section_id_at_start": null
+        },
+        "score": 0.1447136232083574,
+        "strategy": "tfidf",
+        "hit": false
+      }
+    ],
+    "results": [
+      {
+        "id": "principles-economics-3e-monopoly-p4-chunk1",
+        "source_id": "principles-economics-3e-monopoly",
+        "source": "..\\data\\principles-economics-3e-monopoly.pdf",
+        "page": 4,
+        "text": "y lays the main water pipes through a neighborhood, the marginal cost of providing water service to another home is fairly low. Once the electric company installs lines in a new subdivision, the marginal cost of providing additional electrical service to one more home is minimal. It would be costly and duplicative for a second water company to enter the market and invest in a whole second set of main water pipes, or for a second electricity company to enter the market and invest in a whole new set of electrical wires. These industries offer an example where, because of economies of scale, one producer can serve the entire market more efficiently than a number of smaller producers that would need to make duplicate physical capital investments.\n\nA natural monopoly can also arise in smaller local markets for products that are difficult to transport. For example, cement production exhibits e",
+        "metadata": {
+          "is_empty": false,
+          "physical_page": 4,
+          "needs_ocr": false,
+          "headings": [
+            "Control of a Physical Resource"
+          ],
+          "section_at_start": "Natural Monopoly",
+          "section_id_at_start": "9.1"
+        },
+        "score": 0.21584786984421764,
+        "strategy": "tfidf",
+        "hit": true
+      },
+      {
+        "id": "principles-economics-3e-monopoly-p45-chunk0",
+        "source_id": "principles-economics-3e-monopoly",
+        "source": "..\\data\\principles-economics-3e-monopoly.pdf",
+        "page": 45,
+        "text": "11 Monopoly and Antitrust Policy\n\nFIGURE 11.1 Oligopoly versus Competitors in the Marketplace Large corporations, such as the natural gas\n\nproducer Kinder Morgan, can bring economies of scale to the marketplace. Will that benefit consumers, or is more competition better? (Credit: modification of “Aerial view of Kinder Morgan Brisbane Terminal” by Chiara Coetzee/ Flickr Creative Commons, Public Domain)\n\nChapter Objectives In this chapter, you will learn about:\n\n• Corporate Mergers • Regulating Anticompetitive Behavior • Regulating Natural Monopolies • The Great Deregulation Experiment\n\nIntroduction to Monopoly and Antitrust Policy\n\nBRING IT HOME\n\nMore than Cooking, Heating, and Cooling If you live in the United States, there is a slightly better than 50–50 chance your home is heated and cooled using natural gas. You may even use natural gas for cooking. However, those uses are not the pri",
+        "metadata": {
+          "is_empty": false,
+          "physical_page": 45,
+          "needs_ocr": false,
+          "headings": [
+            "11 Monopoly and Antitrust Policy",
+            "Chapter Objectives In this chapter, you will learn about:",
+            "Introduction to Monopoly and Antitrust Policy",
+            "BRING IT HOME"
+          ],
+          "section_at_start": "TABLE 10.7",
+          "section_id_at_start": "10.2"
+        },
+        "score": 0.14870180504505726,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "principles-economics-3e-monopoly-p3-chunk0",
+        "source_id": "principles-economics-3e-monopoly",
+        "source": "..\\data\\principles-economics-3e-monopoly.pdf",
+        "page": 3,
+        "text": "9.1 • How Monopolies Form: Barriers to Entry 217\n\n9.1 How Monopolies Form: Barriers to Entry\n\nLEARNING OBJECTIVES\n\nBy the end of this section, you will be able to:\n\n• Distinguish between a natural monopoly and a legal monopoly. • Explain how economies of scale and the control of natural resources led to the necessary formation of legal monopolies • Analyze the importance of trademarks and patents in promoting innovation • Identify examples of predatory pricing\n\nBecause of the lack of competition, monopolies tend to earn significant economic profits. These profits should attract vigorous competition as we described in Perfect Competition, and yet, because of one particular characteristic of monopoly, they do not. Barriers to entry are the legal, technological, or market forces that discourage or prevent potential competitors from entering a market. Barriers to entry can range from the sim",
+        "metadata": {
+          "is_empty": false,
+          "physical_page": 3,
+          "needs_ocr": false,
+          "headings": [
+            "9.1 How Monopolies Form: Barriers to Entry",
+            "LEARNING OBJECTIVES",
+            "Natural Monopoly"
+          ],
+          "section_at_start": "BRING IT HOME",
+          "section_id_at_start": null
+        },
+        "score": 0.1447136232083574,
+        "strategy": "tfidf",
+        "hit": false
+      }
+    ],
+    "context": "",
+    "context_ids": [],
+    "context_chars": 0,
+    "elapsed_ms": 2.1323999972082675,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": false
+  },
+  {
+    "query_id": "Q027",
+    "split": "test",
+    "question": "What happens to a firm's quantity demanded at a given price as more firms enter a monopolistically competitive market?",
+    "filter": null,
+    "strategy": "tfidf_baseline",
+    "top_k": 3,
+    "budget_chars": 800,
+    "gold": [
+      {
+        "source_id": "principles-economics-3e-monopoly",
+        "page": 29,
+        "evidence": "As more firms enter the market, the quantity demanded at a given price for any particular firm will decline"
+      }
+    ],
+    "results_top3": [
+      {
+        "id": "principles-economics-3e-monopoly-p29-chunk2",
+        "source_id": "principles-economics-3e-monopoly",
+        "source": "..\\data\\principles-economics-3e-monopoly.pdf",
+        "page": 29,
+        "text": "restaurants, or detergent) shifts the demand curve that a monopolistically competitive firm faces. As more firms enter the market, the quantity demanded at a given price for any particular firm will decline, and the firm’s perceived demand curve will shift to the left. As a firm’s perceived demand curve shifts to the left, its marginal revenue curve will shift to the left, too. The shift in marginal revenue will change the profit-maximizing quantity that the firm chooses to produce, since marginal revenue will then equal marginal cost at a lower quantity.\n\nFigure 10.4 (a) shows a situation in which a monopolistic competitor was earning a profit with its original perceived demand curve (D0). The intersection of the marginal revenue curve (MR0) and marginal cost curve (MC) occurs at point S, corresponding to quantity Q0, which is associated on the demand curve at point T with price P0. The",
+        "metadata": {
+          "is_empty": false,
+          "physical_page": 29,
+          "needs_ocr": false,
+          "headings": [
+            "Monopolistic Competitors and Entry"
+          ],
+          "section_at_start": "WORK IT OUT",
+          "section_id_at_start": "10.1"
+        },
+        "score": 0.2867831274541358,
+        "strategy": "tfidf",
+        "hit": true
+      },
+      {
+        "id": "principles-economics-3e-monopoly-p24-chunk1",
+        "source_id": "principles-economics-3e-monopoly",
+        "source": "..\\data\\principles-economics-3e-monopoly.pdf",
+        "page": 24,
+        "text": " who all act as price takers in the face of the competition. If you recall, price takers are firms that have no market power. They simply have to take the market price as given.\n\nMonopoly arises when a single firm sells a product for which there are no close substitutes. We consider Microsoft, for instance, as a monopoly because it dominates the operating systems market.\n\nWhat about the vast majority of real world firms and organizations that fall between these extremes, firms that we could describe as imperfectly competitive? What determines their behavior? They have more influence over the price they charge than perfectly competitive firms, but not as much as a monopoly. What will they do?\n\nOne type of imperfectly competitive market is monopolistic competition. Monopolistically competitive markets feature a large number of competing firms, but the products that they sell are not identi",
+        "metadata": {
+          "is_empty": false,
+          "physical_page": 24,
+          "needs_ocr": false,
+          "headings": [
+            "10.1 Monopolistic Competition",
+            "LEARNING OBJECTIVES"
+          ],
+          "section_at_start": "BRING IT HOME",
+          "section_id_at_start": "9.2"
+        },
+        "score": 0.2777783788777773,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "principles-economics-3e-monopoly-p32-chunk4",
+        "source_id": "principles-economics-3e-monopoly",
+        "source": "..\\data\\principles-economics-3e-monopoly.pdf",
+        "page": 32,
+        "text": "firm can operate at a low enough average cost to compete, and no larger firm could sell what it produced given the quantity demanded in the market.\n\nQuantity demanded in the market may also be two or three times the quantity needed to produce at the minimum of the average cost curve—which means that the market would have room for only two or three oligopoly firms (and they need not produce differentiated products). Again, smaller firms would have higher average costs and be unable to compete, while additional large firms would produce such a high quantity that they would not be able to sell it at a profitable price. This combination of economies of scale and market demand creates the barrier to entry, which led to the Boeing-Airbus oligopoly (also called a duopoly) for large passenger aircraft.\n\nThe product differentiation at the heart of monopolistic competition can also play a role in ",
+        "metadata": {
+          "is_empty": false,
+          "physical_page": 32,
+          "needs_ocr": false,
+          "headings": [
+            "10.2 Oligopoly",
+            "LEARNING OBJECTIVES",
+            "Why Do Oligopolies Exist?"
+          ],
+          "section_at_start": "CLEAR IT UP",
+          "section_id_at_start": "10.1"
+        },
+        "score": 0.2616264287345486,
+        "strategy": "tfidf",
+        "hit": false
+      }
+    ],
+    "results": [
+      {
+        "id": "principles-economics-3e-monopoly-p29-chunk2",
+        "source_id": "principles-economics-3e-monopoly",
+        "source": "..\\data\\principles-economics-3e-monopoly.pdf",
+        "page": 29,
+        "text": "restaurants, or detergent) shifts the demand curve that a monopolistically competitive firm faces. As more firms enter the market, the quantity demanded at a given price for any particular firm will decline, and the firm’s perceived demand curve will shift to the left. As a firm’s perceived demand curve shifts to the left, its marginal revenue curve will shift to the left, too. The shift in marginal revenue will change the profit-maximizing quantity that the firm chooses to produce, since marginal revenue will then equal marginal cost at a lower quantity.\n\nFigure 10.4 (a) shows a situation in which a monopolistic competitor was earning a profit with its original perceived demand curve (D0). The intersection of the marginal revenue curve (MR0) and marginal cost curve (MC) occurs at point S, corresponding to quantity Q0, which is associated on the demand curve at point T with price P0. The",
+        "metadata": {
+          "is_empty": false,
+          "physical_page": 29,
+          "needs_ocr": false,
+          "headings": [
+            "Monopolistic Competitors and Entry"
+          ],
+          "section_at_start": "WORK IT OUT",
+          "section_id_at_start": "10.1"
+        },
+        "score": 0.2867831274541358,
+        "strategy": "tfidf",
+        "hit": true
+      },
+      {
+        "id": "principles-economics-3e-monopoly-p24-chunk1",
+        "source_id": "principles-economics-3e-monopoly",
+        "source": "..\\data\\principles-economics-3e-monopoly.pdf",
+        "page": 24,
+        "text": " who all act as price takers in the face of the competition. If you recall, price takers are firms that have no market power. They simply have to take the market price as given.\n\nMonopoly arises when a single firm sells a product for which there are no close substitutes. We consider Microsoft, for instance, as a monopoly because it dominates the operating systems market.\n\nWhat about the vast majority of real world firms and organizations that fall between these extremes, firms that we could describe as imperfectly competitive? What determines their behavior? They have more influence over the price they charge than perfectly competitive firms, but not as much as a monopoly. What will they do?\n\nOne type of imperfectly competitive market is monopolistic competition. Monopolistically competitive markets feature a large number of competing firms, but the products that they sell are not identi",
+        "metadata": {
+          "is_empty": false,
+          "physical_page": 24,
+          "needs_ocr": false,
+          "headings": [
+            "10.1 Monopolistic Competition",
+            "LEARNING OBJECTIVES"
+          ],
+          "section_at_start": "BRING IT HOME",
+          "section_id_at_start": "9.2"
+        },
+        "score": 0.2777783788777773,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "principles-economics-3e-monopoly-p32-chunk4",
+        "source_id": "principles-economics-3e-monopoly",
+        "source": "..\\data\\principles-economics-3e-monopoly.pdf",
+        "page": 32,
+        "text": "firm can operate at a low enough average cost to compete, and no larger firm could sell what it produced given the quantity demanded in the market.\n\nQuantity demanded in the market may also be two or three times the quantity needed to produce at the minimum of the average cost curve—which means that the market would have room for only two or three oligopoly firms (and they need not produce differentiated products). Again, smaller firms would have higher average costs and be unable to compete, while additional large firms would produce such a high quantity that they would not be able to sell it at a profitable price. This combination of economies of scale and market demand creates the barrier to entry, which led to the Boeing-Airbus oligopoly (also called a duopoly) for large passenger aircraft.\n\nThe product differentiation at the heart of monopolistic competition can also play a role in ",
+        "metadata": {
+          "is_empty": false,
+          "physical_page": 32,
+          "needs_ocr": false,
+          "headings": [
+            "10.2 Oligopoly",
+            "LEARNING OBJECTIVES",
+            "Why Do Oligopolies Exist?"
+          ],
+          "section_at_start": "CLEAR IT UP",
+          "section_id_at_start": "10.1"
+        },
+        "score": 0.2616264287345486,
+        "strategy": "tfidf",
+        "hit": false
+      }
+    ],
+    "context": "",
+    "context_ids": [],
+    "context_chars": 0,
+    "elapsed_ms": 1.876299997093156,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": false
+  },
+  {
+    "query_id": "Q028",
+    "split": "test",
+    "question": "What two conflicting temptations do oligopolistic firms face?",
+    "filter": null,
+    "strategy": "tfidf_baseline",
+    "top_k": 3,
+    "budget_chars": 800,
+    "gold": [
+      {
+        "source_id": "principles-economics-3e-monopoly",
+        "page": 24,
+        "evidence": "which face two conflicting temptations: to collaborate as if they were a single monopoly, or to individually compete to gain profits by expanding output levels and cutting prices"
+      }
+    ],
+    "results_top3": [
+      {
+        "id": "principles-economics-3e-monopoly-p24-chunk3",
+        "source_id": "principles-economics-3e-monopoly",
+        "source": "..\\data\\principles-economics-3e-monopoly.pdf",
+        "page": 24,
+        "text": "rket is oligopoly. Oligopolistic markets are those which a small number of firms dominate. Commercial aircraft provides a good example: Boeing and Airbus each produce slightly less than 50% of the large commercial aircraft in the world. Another example is the U.S. soft drink industry, which Coca-Cola and Pepsi dominate. We characterize oligopolies by high barriers to entry with firms choosing output, pricing, and other decisions strategically based on the decisions of the other firms in the market. In this chapter, we first explore how monopolistically competitive firms will choose their profit- maximizing level of output. We will then discuss oligopolistic firms, which face two conflicting temptations: to collaborate as if they were a single monopoly, or to individually compete to gain profits by expanding output levels and cutting prices. Oligopolistic markets and firms can also take o",
+        "metadata": {
+          "is_empty": false,
+          "physical_page": 24,
+          "needs_ocr": false,
+          "headings": [
+            "10.1 Monopolistic Competition",
+            "LEARNING OBJECTIVES"
+          ],
+          "section_at_start": "BRING IT HOME",
+          "section_id_at_start": "9.2"
+        },
+        "score": 0.31622614287568823,
+        "strategy": "tfidf",
+        "hit": true
+      },
+      {
+        "id": "principles-economics-3e-monopoly-p40-chunk1",
+        "source_id": "principles-economics-3e-monopoly",
+        "source": "..\\data\\principles-economics-3e-monopoly.pdf",
+        "page": 40,
+        "text": "ng firms in the industry or firms outside. As those firms capture the original firm’s profit, what will happen to the original firm’s profit- maximizing price and output levels?\n\n3 . Consider the curve in the figure below, which shows the market demand, marginal cost, and marginal revenue curve for firms in an oligopolistic industry. In this example, we assume firms have zero fixed costs.\n\nFIGURE 10.6\n\na. Suppose the firms collude to form a cartel. What price will the cartel charge? What quantity will the\n\ncartel supply? How much profit will the cartel earn? b. Suppose now that the cartel breaks up and the oligopolistic firms compete as vigorously as possible by\n\ncutting the price and increasing sales. What will be the industry quantity and price? What will be the collective profits of all firms in the industry? c. Compare the equilibrium price, quantity, and profit for the cartel and cu",
+        "metadata": {
+          "is_empty": false,
+          "physical_page": 40,
+          "needs_ocr": false,
+          "headings": [
+            "Self-Check Questions",
+            "FIGURE 10.6",
+            "TABLE 10.4"
+          ],
+          "section_at_start": "10.2 Oligopoly",
+          "section_id_at_start": "10.2"
+        },
+        "score": 0.1454974541868696,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "principles-economics-3e-monopoly-p33-chunk0",
+        "source_id": "principles-economics-3e-monopoly",
+        "source": "..\\data\\principles-economics-3e-monopoly.pdf",
+        "page": 33,
+        "text": "10.2 • Oligopoly 247\n\nFor example, firms may need to reach a certain minimum size before they are able to spend enough on advertising and marketing to create a recognizable brand name. The problem in competing with, say, Coca- Cola or Pepsi is not that producing fizzy drinks is technologically difficult, but rather that creating a brand name and marketing effort to equal Coke or Pepsi is an enormous task.\n\nCollusion or Competition?\n\nWhen oligopoly firms in a certain market decide what quantity to produce and what price to charge, they face a temptation to act as if they were a monopoly. By acting together, oligopolistic firms can hold down industry output, charge a higher price, and divide the profit among themselves. When firms act together in this way to reduce output and keep prices high, it is called collusion. A group of firms that have a formal agreement to collude to produce the m",
+        "metadata": {
+          "is_empty": false,
+          "physical_page": 33,
+          "needs_ocr": false,
+          "headings": [
+            "Collusion or Competition?",
+            "CLEAR IT UP",
+            "The Prisoner’s Dilemma"
+          ],
+          "section_at_start": "Why Do Oligopolies Exist?",
+          "section_id_at_start": "10.2"
+        },
+        "score": 0.11415891145457735,
+        "strategy": "tfidf",
+        "hit": false
+      }
+    ],
+    "results": [
+      {
+        "id": "principles-economics-3e-monopoly-p24-chunk3",
+        "source_id": "principles-economics-3e-monopoly",
+        "source": "..\\data\\principles-economics-3e-monopoly.pdf",
+        "page": 24,
+        "text": "rket is oligopoly. Oligopolistic markets are those which a small number of firms dominate. Commercial aircraft provides a good example: Boeing and Airbus each produce slightly less than 50% of the large commercial aircraft in the world. Another example is the U.S. soft drink industry, which Coca-Cola and Pepsi dominate. We characterize oligopolies by high barriers to entry with firms choosing output, pricing, and other decisions strategically based on the decisions of the other firms in the market. In this chapter, we first explore how monopolistically competitive firms will choose their profit- maximizing level of output. We will then discuss oligopolistic firms, which face two conflicting temptations: to collaborate as if they were a single monopoly, or to individually compete to gain profits by expanding output levels and cutting prices. Oligopolistic markets and firms can also take o",
+        "metadata": {
+          "is_empty": false,
+          "physical_page": 24,
+          "needs_ocr": false,
+          "headings": [
+            "10.1 Monopolistic Competition",
+            "LEARNING OBJECTIVES"
+          ],
+          "section_at_start": "BRING IT HOME",
+          "section_id_at_start": "9.2"
+        },
+        "score": 0.31622614287568823,
+        "strategy": "tfidf",
+        "hit": true
+      },
+      {
+        "id": "principles-economics-3e-monopoly-p40-chunk1",
+        "source_id": "principles-economics-3e-monopoly",
+        "source": "..\\data\\principles-economics-3e-monopoly.pdf",
+        "page": 40,
+        "text": "ng firms in the industry or firms outside. As those firms capture the original firm’s profit, what will happen to the original firm’s profit- maximizing price and output levels?\n\n3 . Consider the curve in the figure below, which shows the market demand, marginal cost, and marginal revenue curve for firms in an oligopolistic industry. In this example, we assume firms have zero fixed costs.\n\nFIGURE 10.6\n\na. Suppose the firms collude to form a cartel. What price will the cartel charge? What quantity will the\n\ncartel supply? How much profit will the cartel earn? b. Suppose now that the cartel breaks up and the oligopolistic firms compete as vigorously as possible by\n\ncutting the price and increasing sales. What will be the industry quantity and price? What will be the collective profits of all firms in the industry? c. Compare the equilibrium price, quantity, and profit for the cartel and cu",
+        "metadata": {
+          "is_empty": false,
+          "physical_page": 40,
+          "needs_ocr": false,
+          "headings": [
+            "Self-Check Questions",
+            "FIGURE 10.6",
+            "TABLE 10.4"
+          ],
+          "section_at_start": "10.2 Oligopoly",
+          "section_id_at_start": "10.2"
+        },
+        "score": 0.1454974541868696,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "principles-economics-3e-monopoly-p33-chunk0",
+        "source_id": "principles-economics-3e-monopoly",
+        "source": "..\\data\\principles-economics-3e-monopoly.pdf",
+        "page": 33,
+        "text": "10.2 • Oligopoly 247\n\nFor example, firms may need to reach a certain minimum size before they are able to spend enough on advertising and marketing to create a recognizable brand name. The problem in competing with, say, Coca- Cola or Pepsi is not that producing fizzy drinks is technologically difficult, but rather that creating a brand name and marketing effort to equal Coke or Pepsi is an enormous task.\n\nCollusion or Competition?\n\nWhen oligopoly firms in a certain market decide what quantity to produce and what price to charge, they face a temptation to act as if they were a monopoly. By acting together, oligopolistic firms can hold down industry output, charge a higher price, and divide the profit among themselves. When firms act together in this way to reduce output and keep prices high, it is called collusion. A group of firms that have a formal agreement to collude to produce the m",
+        "metadata": {
+          "is_empty": false,
+          "physical_page": 33,
+          "needs_ocr": false,
+          "headings": [
+            "Collusion or Competition?",
+            "CLEAR IT UP",
+            "The Prisoner’s Dilemma"
+          ],
+          "section_at_start": "Why Do Oligopolies Exist?",
+          "section_id_at_start": "10.2"
+        },
+        "score": 0.11415891145457735,
+        "strategy": "tfidf",
+        "hit": false
+      }
+    ],
+    "context": "",
+    "context_ids": [],
+    "context_chars": 0,
+    "elapsed_ms": 1.1869000154547393,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": false
+  },
+  {
+    "query_id": "Q029",
+    "split": "test",
+    "question": "Why did the soap cartel disintegrate?",
+    "filter": null,
+    "strategy": "tfidf_baseline",
+    "top_k": 3,
+    "budget_chars": 800,
+    "gold": [
+      {
+        "source_id": "principles-economics-3e-monopoly",
+        "page": 38,
+        "evidence": "Like many cartels, the soap cartel disintegrated due to the very strong temptation for each member to maximize its own individual profits."
+      },
+      {
+        "source_id": "principles-economics-3e-monopoly",
+        "page": 33,
+        "evidence": "each individual oligopoly faces a private temptation to produce just a slightly higher quantity and earn slightly higher profit"
+      }
+    ],
+    "results_top3": [
+      {
+        "id": "principles-economics-3e-monopoly-p38-chunk1",
+        "source_id": "principles-economics-3e-monopoly",
+        "source": "..\\data\\principles-economics-3e-monopoly.pdf",
+        "page": 38,
+        "text": "es. “One [soap] executive recalled ‘chaotic’ meetings as each side tried to work out how the other had bent the rules.” Like many cartels, the soap cartel disintegrated due to the very strong temptation for each member to maximize its own individual profits.\n\nHow did this soap opera end? After an investigation, French antitrust authorities fined Colgate-Palmolive, Henkel, and Proctor & Gamble a total of €361 million ($484 million). A similar fate befell the icemakers. Bagged ice is a commodity, a perfect substitute, generally sold in 7- or 22-pound bags. No one cares what label is on the bag. By agreeing to carve up the ice market, control broad geographic swaths of territory, and set prices, the icemakers moved from perfect competition to a monopoly model. After the agreements, each firm was the sole supplier of bagged ice to a region. There were profits in both the long run and the sho",
+        "metadata": {
+          "is_empty": false,
+          "physical_page": 38,
+          "needs_ocr": false,
+          "headings": [
+            "BRING IT HOME"
+          ],
+          "section_at_start": "Tradeoffs of Imperfect Competition",
+          "section_id_at_start": "10.2"
+        },
+        "score": 0.2568546929620573,
+        "strategy": "tfidf",
+        "hit": true
+      },
+      {
+        "id": "principles-economics-3e-monopoly-p40-chunk1",
+        "source_id": "principles-economics-3e-monopoly",
+        "source": "..\\data\\principles-economics-3e-monopoly.pdf",
+        "page": 40,
+        "text": "ng firms in the industry or firms outside. As those firms capture the original firm’s profit, what will happen to the original firm’s profit- maximizing price and output levels?\n\n3 . Consider the curve in the figure below, which shows the market demand, marginal cost, and marginal revenue curve for firms in an oligopolistic industry. In this example, we assume firms have zero fixed costs.\n\nFIGURE 10.6\n\na. Suppose the firms collude to form a cartel. What price will the cartel charge? What quantity will the\n\ncartel supply? How much profit will the cartel earn? b. Suppose now that the cartel breaks up and the oligopolistic firms compete as vigorously as possible by\n\ncutting the price and increasing sales. What will be the industry quantity and price? What will be the collective profits of all firms in the industry? c. Compare the equilibrium price, quantity, and profit for the cartel and cu",
+        "metadata": {
+          "is_empty": false,
+          "physical_page": 40,
+          "needs_ocr": false,
+          "headings": [
+            "Self-Check Questions",
+            "FIGURE 10.6",
+            "TABLE 10.4"
+          ],
+          "section_at_start": "10.2 Oligopoly",
+          "section_id_at_start": "10.2"
+        },
+        "score": 0.23061213493040916,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "principles-economics-3e-monopoly-p38-chunk0",
+        "source_id": "principles-economics-3e-monopoly",
+        "source": "..\\data\\principles-economics-3e-monopoly.pdf",
+        "page": 38,
+        "text": "252 10 • Monopolistic Competition and Oligopoly\n\nBRING IT HOME\n\nThe Temptation to Defy the Law Oligopolistic firms have been called “cats in a bag,” as this chapter mentioned. The French detergent makers chose to “cozy up” with each other. The result? An uneasy and tenuous relationship. When the Wall Street Journal reported on the matter, it wrote: “According to a statement a Henkel manager made to the [French anti-trust] commission, the detergent makers wanted ‘to limit the intensity of the competition between them and clean up the market.’ Nevertheless, by the early 1990s, a price war had broken out among them.” During the soap executives’ meetings, sometimes lasting more than four hours, the companies established complex pricing structures. “One [soap] executive recalled ‘chaotic’ meetings as each side tried to work out how the other had bent the rules.” Like many cartels, the soap ca",
+        "metadata": {
+          "is_empty": false,
+          "physical_page": 38,
+          "needs_ocr": false,
+          "headings": [
+            "BRING IT HOME"
+          ],
+          "section_at_start": "Tradeoffs of Imperfect Competition",
+          "section_id_at_start": "10.2"
+        },
+        "score": 0.20452331989103265,
+        "strategy": "tfidf",
+        "hit": false
+      }
+    ],
+    "results": [
+      {
+        "id": "principles-economics-3e-monopoly-p38-chunk1",
+        "source_id": "principles-economics-3e-monopoly",
+        "source": "..\\data\\principles-economics-3e-monopoly.pdf",
+        "page": 38,
+        "text": "es. “One [soap] executive recalled ‘chaotic’ meetings as each side tried to work out how the other had bent the rules.” Like many cartels, the soap cartel disintegrated due to the very strong temptation for each member to maximize its own individual profits.\n\nHow did this soap opera end? After an investigation, French antitrust authorities fined Colgate-Palmolive, Henkel, and Proctor & Gamble a total of €361 million ($484 million). A similar fate befell the icemakers. Bagged ice is a commodity, a perfect substitute, generally sold in 7- or 22-pound bags. No one cares what label is on the bag. By agreeing to carve up the ice market, control broad geographic swaths of territory, and set prices, the icemakers moved from perfect competition to a monopoly model. After the agreements, each firm was the sole supplier of bagged ice to a region. There were profits in both the long run and the sho",
+        "metadata": {
+          "is_empty": false,
+          "physical_page": 38,
+          "needs_ocr": false,
+          "headings": [
+            "BRING IT HOME"
+          ],
+          "section_at_start": "Tradeoffs of Imperfect Competition",
+          "section_id_at_start": "10.2"
+        },
+        "score": 0.2568546929620573,
+        "strategy": "tfidf",
+        "hit": true
+      },
+      {
+        "id": "principles-economics-3e-monopoly-p40-chunk1",
+        "source_id": "principles-economics-3e-monopoly",
+        "source": "..\\data\\principles-economics-3e-monopoly.pdf",
+        "page": 40,
+        "text": "ng firms in the industry or firms outside. As those firms capture the original firm’s profit, what will happen to the original firm’s profit- maximizing price and output levels?\n\n3 . Consider the curve in the figure below, which shows the market demand, marginal cost, and marginal revenue curve for firms in an oligopolistic industry. In this example, we assume firms have zero fixed costs.\n\nFIGURE 10.6\n\na. Suppose the firms collude to form a cartel. What price will the cartel charge? What quantity will the\n\ncartel supply? How much profit will the cartel earn? b. Suppose now that the cartel breaks up and the oligopolistic firms compete as vigorously as possible by\n\ncutting the price and increasing sales. What will be the industry quantity and price? What will be the collective profits of all firms in the industry? c. Compare the equilibrium price, quantity, and profit for the cartel and cu",
+        "metadata": {
+          "is_empty": false,
+          "physical_page": 40,
+          "needs_ocr": false,
+          "headings": [
+            "Self-Check Questions",
+            "FIGURE 10.6",
+            "TABLE 10.4"
+          ],
+          "section_at_start": "10.2 Oligopoly",
+          "section_id_at_start": "10.2"
+        },
+        "score": 0.23061213493040916,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "principles-economics-3e-monopoly-p38-chunk0",
+        "source_id": "principles-economics-3e-monopoly",
+        "source": "..\\data\\principles-economics-3e-monopoly.pdf",
+        "page": 38,
+        "text": "252 10 • Monopolistic Competition and Oligopoly\n\nBRING IT HOME\n\nThe Temptation to Defy the Law Oligopolistic firms have been called “cats in a bag,” as this chapter mentioned. The French detergent makers chose to “cozy up” with each other. The result? An uneasy and tenuous relationship. When the Wall Street Journal reported on the matter, it wrote: “According to a statement a Henkel manager made to the [French anti-trust] commission, the detergent makers wanted ‘to limit the intensity of the competition between them and clean up the market.’ Nevertheless, by the early 1990s, a price war had broken out among them.” During the soap executives’ meetings, sometimes lasting more than four hours, the companies established complex pricing structures. “One [soap] executive recalled ‘chaotic’ meetings as each side tried to work out how the other had bent the rules.” Like many cartels, the soap ca",
+        "metadata": {
+          "is_empty": false,
+          "physical_page": 38,
+          "needs_ocr": false,
+          "headings": [
+            "BRING IT HOME"
+          ],
+          "section_at_start": "Tradeoffs of Imperfect Competition",
+          "section_id_at_start": "10.2"
+        },
+        "score": 0.20452331989103265,
+        "strategy": "tfidf",
+        "hit": false
+      }
+    ],
+    "context": "",
+    "context_ids": [],
+    "context_chars": 0,
+    "elapsed_ms": 0.7781000167597085,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": false
+  },
+  {
+    "query_id": "Q030",
+    "split": "test",
+    "question": "In section 10.2, what is a kinked demand curve?",
+    "filter": {
+      "section_id": "10.2"
+    },
+    "strategy": "tfidf_baseline",
+    "top_k": 3,
+    "budget_chars": 800,
+    "gold": [
+      {
+        "source_id": "principles-economics-3e-monopoly",
+        "page": 36,
+        "evidence": "the kinked demand curve, in which competing oligopoly firms commit to match price cuts, but not price increases"
+      },
+      {
+        "source_id": "principles-economics-3e-monopoly",
+        "page": 39,
+        "evidence": "kinked demand curve a perceived demand curve that arises when competing oligopoly firms commit to\n\nmatch price cuts, but not price increases"
+      }
+    ],
+    "results_top3": [
+      {
+        "id": "principles-economics-3e-monopoly-p9-chunk1",
+        "source_id": "principles-economics-3e-monopoly",
+        "source": "..\\data\\principles-economics-3e-monopoly.pdf",
+        "page": 9,
+        "text": "much revenue either. The challenge for the monopolist is to strike a profit-maximizing balance between the price it charges and the quantity that it sells. However, why isn’t the perfectly competitive firm’s demand curve also the market demand curve? See the following Clear It Up feature for the answer to this question.\n\nCLEAR IT UP\n\nWhat is the difference between perceived demand and market demand? The demand curve as perceived by a perfectly competitive firm is not the overall market demand curve for that product. However, the firm’s demand curve as perceived by a monopoly is the same as the market demand curve.\n\nThe reason for the difference is that each perfectly competitive firm perceives the demand for its products in a market that includes many other firms. In effect, the demand curve perceived by a perfectly competitive firm is a tiny slice of the entire market demand curve. In c",
+        "metadata": {
+          "is_empty": false,
+          "physical_page": 9,
+          "needs_ocr": false,
+          "headings": [
+            "CLEAR IT UP",
+            "Total Cost and Total Revenue for a Monopolist"
+          ],
+          "section_at_start": "CLEAR IT UP",
+          "section_id_at_start": "9.2"
+        },
+        "score": 0.25935575203368655,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "principles-economics-3e-monopoly-p19-chunk3",
+        "source_id": "principles-economics-3e-monopoly",
+        "source": "..\\data\\principles-economics-3e-monopoly.pdf",
+        "page": 19,
+        "text": "ral monopoly “natural”?\n\n15 . How is the demand curve perceived by a perfectly competitive firm different from the demand curve perceived by a monopolist?\n\n16 . How does the demand curve perceived by a monopolist compare with the market demand curve?\n\n17 . Is a monopolist a price taker? Explain briefly.\n\n18 . What is the usual shape of a total revenue curve for a monopolist? Why?\n\n19 . What is the usual shape of a marginal revenue curve for a monopolist? Why?",
+        "metadata": {
+          "is_empty": false,
+          "physical_page": 19,
+          "needs_ocr": false,
+          "headings": [
+            "Self-Check Questions",
+            "Review Questions"
+          ],
+          "section_at_start": "9.2 How a Profit-Maximizing Monopoly Chooses Output and Price",
+          "section_id_at_start": "9.2"
+        },
+        "score": 0.24769710904871073,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "principles-economics-3e-monopoly-p25-chunk4",
+        "source_id": "principles-economics-3e-monopoly",
+        "source": "..\\data\\principles-economics-3e-monopoly.pdf",
+        "page": 25,
+        "text": " competition. Figure 10.2 offers a reminder that the demand curve that a perfectly competitive firm faces is perfectly elastic or flat, because the perfectly competitive firm can sell any quantity it wishes at the prevailing market price. In contrast, the demand curve, as faced by a monopolist, is the market demand curve, since a monopolist is the only firm in the market, and hence is downward sloping.",
+        "metadata": {
+          "is_empty": false,
+          "physical_page": 25,
+          "needs_ocr": false,
+          "headings": [
+            "CLEAR IT UP",
+            "Differentiated Products",
+            "Perceived Demand for a Monopolistic Competitor"
+          ],
+          "section_at_start": "LEARNING OBJECTIVES",
+          "section_id_at_start": "10.1"
+        },
+        "score": 0.24073434137183605,
+        "strategy": "tfidf",
+        "hit": false
+      }
+    ],
+    "results": [
+      {
+        "id": "principles-economics-3e-monopoly-p9-chunk1",
+        "source_id": "principles-economics-3e-monopoly",
+        "source": "..\\data\\principles-economics-3e-monopoly.pdf",
+        "page": 9,
+        "text": "much revenue either. The challenge for the monopolist is to strike a profit-maximizing balance between the price it charges and the quantity that it sells. However, why isn’t the perfectly competitive firm’s demand curve also the market demand curve? See the following Clear It Up feature for the answer to this question.\n\nCLEAR IT UP\n\nWhat is the difference between perceived demand and market demand? The demand curve as perceived by a perfectly competitive firm is not the overall market demand curve for that product. However, the firm’s demand curve as perceived by a monopoly is the same as the market demand curve.\n\nThe reason for the difference is that each perfectly competitive firm perceives the demand for its products in a market that includes many other firms. In effect, the demand curve perceived by a perfectly competitive firm is a tiny slice of the entire market demand curve. In c",
+        "metadata": {
+          "is_empty": false,
+          "physical_page": 9,
+          "needs_ocr": false,
+          "headings": [
+            "CLEAR IT UP",
+            "Total Cost and Total Revenue for a Monopolist"
+          ],
+          "section_at_start": "CLEAR IT UP",
+          "section_id_at_start": "9.2"
+        },
+        "score": 0.25935575203368655,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "principles-economics-3e-monopoly-p19-chunk3",
+        "source_id": "principles-economics-3e-monopoly",
+        "source": "..\\data\\principles-economics-3e-monopoly.pdf",
+        "page": 19,
+        "text": "ral monopoly “natural”?\n\n15 . How is the demand curve perceived by a perfectly competitive firm different from the demand curve perceived by a monopolist?\n\n16 . How does the demand curve perceived by a monopolist compare with the market demand curve?\n\n17 . Is a monopolist a price taker? Explain briefly.\n\n18 . What is the usual shape of a total revenue curve for a monopolist? Why?\n\n19 . What is the usual shape of a marginal revenue curve for a monopolist? Why?",
+        "metadata": {
+          "is_empty": false,
+          "physical_page": 19,
+          "needs_ocr": false,
+          "headings": [
+            "Self-Check Questions",
+            "Review Questions"
+          ],
+          "section_at_start": "9.2 How a Profit-Maximizing Monopoly Chooses Output and Price",
+          "section_id_at_start": "9.2"
+        },
+        "score": 0.24769710904871073,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "principles-economics-3e-monopoly-p25-chunk4",
+        "source_id": "principles-economics-3e-monopoly",
+        "source": "..\\data\\principles-economics-3e-monopoly.pdf",
+        "page": 25,
+        "text": " competition. Figure 10.2 offers a reminder that the demand curve that a perfectly competitive firm faces is perfectly elastic or flat, because the perfectly competitive firm can sell any quantity it wishes at the prevailing market price. In contrast, the demand curve, as faced by a monopolist, is the market demand curve, since a monopolist is the only firm in the market, and hence is downward sloping.",
+        "metadata": {
+          "is_empty": false,
+          "physical_page": 25,
+          "needs_ocr": false,
+          "headings": [
+            "CLEAR IT UP",
+            "Differentiated Products",
+            "Perceived Demand for a Monopolistic Competitor"
+          ],
+          "section_at_start": "LEARNING OBJECTIVES",
+          "section_id_at_start": "10.1"
+        },
+        "score": 0.24073434137183605,
+        "strategy": "tfidf",
+        "hit": false
+      }
+    ],
+    "context": "[principles-economics-3e-monopoly-p19-chunk3 | ..\\data\\principles-economics-3e-monopoly.pdf | page 19]\nral monopoly “natural”?\n\n15 . How is the demand curve perceived by a perfectly competitive firm different from the demand curve perceived by a monopolist?\n\n16 . How does the demand curve perceived by a monopolist compare with the market demand curve?\n\n17 . Is a monopolist a price taker? Explain briefly.\n\n18 . What is the usual shape of a total revenue curve for a monopolist? Why?\n\n19 . What is the usual shape of a marginal revenue curve for a monopolist? Why?",
+    "context_ids": [
+      "principles-economics-3e-monopoly-p19-chunk3"
+    ],
+    "context_chars": 566,
+    "elapsed_ms": 1.0386000212747604,
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false
+  }
+]

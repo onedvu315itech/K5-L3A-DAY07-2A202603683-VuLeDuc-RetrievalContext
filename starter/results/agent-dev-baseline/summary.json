@@ -1,0 +1,40 @@
+{
+  "split": "dev",
+  "run_name": "agent-dev-baseline",
+  "cases": 25,
+  "provider_errors": 0,
+  "tool_use": {
+    "n": 25,
+    "N": 25
+  },
+  "grounded_answer": {
+    "0": 20,
+    "1": 1,
+    "2": 2,
+    "N": 23,
+    "mean": 0.21739130434782608
+  },
+  "citation_validity": {
+    "n": 2,
+    "N": 3
+  },
+  "answer_citation_coverage": {
+    "n": 3,
+    "N": 3
+  },
+  "abstention": {
+    "n": 2,
+    "N": 2
+  },
+  "false_abstention": {
+    "n": 20,
+    "N": 23
+  },
+  "total_elapsed_ms": 39025.46,
+  "mean_elapsed_ms": 1561.02,
+  "total_cost_usd": 0.001549,
+  "search_calls_distribution": {
+    "1_call": 25,
+    "2_calls": 0
+  }
+}

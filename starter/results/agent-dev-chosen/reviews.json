@@ -1,0 +1,251 @@
+[
+  {
+    "query_id": "Q001",
+    "answerable": true,
+    "status": "answered",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "[agent-dev-chosen] Full score (2/2): Answer accurately and completely addresses 'What is a monopoly?' matching expected answer ('A monopoly is a market in which one firm produces all of the output.'), and cited chunk(s) ['principles-economics-3e-monopoly-p8-chunk1'] directly contain the supporting evidence in the PDF."
+  },
+  {
+    "query_id": "Q002",
+    "answerable": true,
+    "status": "answered",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "[agent-dev-chosen] Full score (2/2): Answer accurately and completely addresses 'What are barriers to entry?' matching expected answer ('Barriers to entry are the legal, technological, or market forces that discourage or prevent potential competitors from entering a market.'), and cited chunk(s) ['principles-economics-3e-monopoly-p18-chunk2'] directly contain the supporting evidence in the PDF."
+  },
+  {
+    "query_id": "Q003",
+    "answerable": true,
+    "status": "answered",
+    "answer_grade": 1,
+    "citation_support": [
+      false
+    ],
+    "reason": "[agent-dev-chosen] Partial grade (1/2) and incomplete citation support: Cited chunk p18-chunk2 only lists 'economies of scale that lead to natural monopoly', whereas the agent's claim about low marginal cost of adding customers comes from p4-chunk0 (which was in context_ids[0] on page 4 but not cited inline by the model)."
+  },
+  {
+    "query_id": "Q004",
+    "answerable": true,
+    "status": "answered",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "[agent-dev-chosen] Full score (2/2): Answer accurately and completely addresses 'In section 9.1, why were other firms unable to compete with ALCOA in aluminum in the 1930s?' matching expected answer ('ALCOA controlled most of the supply of bauxite, so other firms could not produce enough aluminum to compete.'), and cited chunk(s) ['principles-economics-3e-monopoly-p4-chunk2'] directly contain the supporting evidence in the PDF."
+  },
+  {
+    "query_id": "Q005",
+    "answerable": true,
+    "status": "answered",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "[agent-dev-chosen] Full score (2/2): Answer accurately and completely addresses 'What do governments do to create a legal monopoly?' matching expected answer ('The government erects barriers to entry by prohibiting or limiting competition.'), and cited chunk(s) ['principles-economics-3e-monopoly-p5-chunk0'] directly contain the supporting evidence in the PDF."
+  },
+  {
+    "query_id": "Q006",
+    "answerable": true,
+    "status": "answered",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "[agent-dev-chosen] Full score (2/2): Answer accurately and completely addresses 'How do patents let innovative firms recover their research and development costs?' matching expected answer ('Patents give limited monopoly power so that firms can recoup their R&D investment before other firms can produce the product more cheaply.'), and cited chunk(s) ['principles-economics-3e-monopoly-p5-chunk2'] directly contain the supporting evidence in the PDF."
+  },
+  {
+    "query_id": "Q007",
+    "answerable": true,
+    "status": "answered",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "[agent-dev-chosen] Full score (2/2): Answer accurately and completely addresses 'What is predatory pricing?' matching expected answer ('Predatory pricing is when a firm uses the threat of sharp price cuts to discourage competition.'), and cited chunk(s) ['principles-economics-3e-monopoly-p18-chunk1'] directly contain the supporting evidence in the PDF."
+  },
+  {
+    "query_id": "Q008",
+    "answerable": true,
+    "status": "answered",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "[agent-dev-chosen] Full score (2/2): Answer accurately and completely addresses 'What demand curve does a monopolist face?' matching expected answer ('The market demand curve, which is downward-sloping.'), and cited chunk(s) ['principles-economics-3e-monopoly-p9-chunk1'] directly contain the supporting evidence in the PDF."
+  },
+  {
+    "query_id": "Q009",
+    "answerable": true,
+    "status": "answered",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "[agent-dev-chosen] Full score (2/2): Answer accurately and completely addresses 'Why does total revenue for a monopolist first rise and then fall as it sells more output?' matching expected answer ('To sell more output the monopolist must cut its price; selling more raises revenue but the lower price reduces it.'), and cited chunk(s) ['principles-economics-3e-monopoly-p18-chunk3'] directly contain the supporting evidence in the PDF."
+  },
+  {
+    "query_id": "Q010",
+    "answerable": true,
+    "status": "answered",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "[agent-dev-chosen] Full score (2/2): Answer accurately and completely addresses 'Why is a monopolist's marginal revenue less than the price of the unit it sells?' matching expected answer ('Because the lower price applies to all units sold, so marginal revenue is less than the price of that unit.'), and cited chunk(s) ['principles-economics-3e-monopoly-p15-chunk1'] directly contain the supporting evidence in the PDF."
+  },
+  {
+    "query_id": "Q011",
+    "answerable": true,
+    "status": "answered",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "[agent-dev-chosen] Full score (2/2): Answer accurately and completely addresses 'In section 9.2, what rule does a profit-maximizing monopoly follow to choose its quantity of output?' matching expected answer ('Produce up to the quantity where marginal revenue equals marginal cost (MR = MC).'), and cited chunk(s) ['principles-economics-3e-monopoly-p12-chunk1'] directly contain the supporting evidence in the PDF."
+  },
+  {
+    "query_id": "Q012",
+    "answerable": true,
+    "status": "answered",
+    "answer_grade": 1,
+    "citation_support": [
+      false
+    ],
+    "reason": "[agent-dev-chosen] Partial grade (1/2) and entity-mismatched citation: The answer correctly states that the firm reads the price from its perceived demand curve at the chosen output, but cites p28-chunk3 (Section 10.1 'Step 2. The monopolistic competitor decides what price to charge') instead of Section 9.2 (p12-chunk2 / p18-chunk4 for a pure monopolist)."
+  },
+  {
+    "query_id": "Q013",
+    "answerable": true,
+    "status": "answered",
+    "answer_grade": 2,
+    "citation_support": [
+      true,
+      true
+    ],
+    "reason": "[agent-dev-chosen] Full score (2/2): Answer accurately and completely addresses 'Why is a monopoly considered allocatively inefficient?' matching expected answer ('Monopolies do not supply enough output to be allocatively efficient.'), and cited chunk(s) ['principles-economics-3e-monopoly-p16-chunk0', 'principles-economics-3e-monopoly-p18-chunk4'] directly contain the supporting evidence in the PDF."
+  },
+  {
+    "query_id": "Q014",
+    "answerable": true,
+    "status": "answered",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "[agent-dev-chosen] Full score (2/2): Answer accurately and completely addresses 'In what ways can a firm make its products different from those of its competitors?' matching expected answer ('Through physical aspects, location, intangible aspects, and perceptions of the product.'), and cited chunk(s) ['principles-economics-3e-monopoly-p25-chunk1'] directly contain the supporting evidence in the PDF."
+  },
+  {
+    "query_id": "Q015",
+    "answerable": true,
+    "status": "answered",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "[agent-dev-chosen] Full score (2/2): Answer accurately and completely addresses 'What characterizes monopolistic competition?' matching expected answer ('Many firms compete against each other but sell products that are distinctive in some way.'), and cited chunk(s) ['principles-economics-3e-monopoly-p24-chunk4'] directly contain the supporting evidence in the PDF."
+  },
+  {
+    "query_id": "Q016",
+    "answerable": true,
+    "status": "answered",
+    "answer_grade": 2,
+    "citation_support": [
+      true,
+      true,
+      true
+    ],
+    "reason": "[agent-dev-chosen] Full score (2/2): Answer accurately and completely addresses 'How does the demand curve facing a monopolistically competitive firm compare with that of a monopoly in terms of elasticity?' matching expected answer ('It is more elastic than a monopoly's because there are substitutes.'), and cited chunk(s) ['principles-economics-3e-monopoly-p26-chunk0', 'principles-economics-3e-monopoly-p26-chunk1', 'principles-economics-3e-monopoly-p39-chunk2'] directly contain the supporting evidence in the PDF."
+  },
+  {
+    "query_id": "Q017",
+    "answerable": true,
+    "status": "answered",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "[agent-dev-chosen] Full score (2/2): Answer accurately and completely addresses 'In section 10.1, what happens to monopolistically competitive firms' economic profits in the long run?' matching expected answer ('Entry and exit drive them toward zero economic profit.'), and cited chunk(s) ['principles-economics-3e-monopoly-p30-chunk1'] directly contain the supporting evidence in the PDF."
+  },
+  {
+    "query_id": "Q018",
+    "answerable": true,
+    "status": "answered",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "[agent-dev-chosen] Full score (2/2): Answer accurately and completely addresses 'How can a successful advertising campaign help a monopolistically competitive firm?' matching expected answer ('It may let the firm sell a greater quantity, charge a higher price, or both.'), and cited chunk(s) ['principles-economics-3e-monopoly-p31-chunk5'] directly contain the supporting evidence in the PDF."
+  },
+  {
+    "query_id": "Q019",
+    "answerable": true,
+    "status": "answered",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "[agent-dev-chosen] Full score (2/2): Answer accurately and completely addresses 'What defines an oligopoly?' matching expected answer ('A small number of large firms have all or most of the sales in an industry.'), and cited chunk(s) ['principles-economics-3e-monopoly-p39-chunk4'] directly contain the supporting evidence in the PDF."
+  },
+  {
+    "query_id": "Q020",
+    "answerable": true,
+    "status": "answered",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "[agent-dev-chosen] Full score (2/2): Answer accurately and completely addresses 'What does mutual interdependence mean in an oligopoly?' matching expected answer ('Decisions such as output, price, and advertising depend on the decisions of other firms.'), and cited chunk(s) ['principles-economics-3e-monopoly-p32-chunk2'] directly contain the supporting evidence in the PDF."
+  },
+  {
+    "query_id": "Q021",
+    "answerable": true,
+    "status": "answered",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "[agent-dev-chosen] Full score (2/2): Answer accurately and completely addresses 'How can the relationship between market demand and economies of scale limit an oligopoly to only a few firms?' matching expected answer ('Market quantity demanded may be only two or three times the quantity needed to reach minimum average cost, leaving room for only two or three firms.'), and cited chunk(s) ['principles-economics-3e-monopoly-p32-chunk4'] directly contain the supporting evidence in the PDF."
+  },
+  {
+    "query_id": "Q022",
+    "answerable": true,
+    "status": "answered",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "[agent-dev-chosen] Full score (2/2): Answer accurately and completely addresses 'In section 10.2, what is a cartel?' matching expected answer ('A group of firms with a formal agreement to collude to produce the monopoly output and sell at the monopoly price.'), and cited chunk(s) ['principles-economics-3e-monopoly-p39-chunk0'] directly contain the supporting evidence in the PDF."
+  },
+  {
+    "query_id": "Q023",
+    "answerable": true,
+    "status": "answered",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "[agent-dev-chosen] Full score (2/2): Answer accurately and completely addresses 'What is game theory?' matching expected answer ('A branch of mathematics that analyzes situations in which players make decisions and receive payoffs based on what other players decide.'), and cited chunk(s) ['principles-economics-3e-monopoly-p39-chunk0'] directly contain the supporting evidence in the PDF."
+  },
+  {
+    "query_id": "U001",
+    "answerable": false,
+    "status": "abstain",
+    "citation_support": [],
+    "abstention_correct": true,
+    "reason": "[agent-dev-chosen] Question asks about out-of-corpus facts (Chapters 9-11.1 cover monopoly, monopolistic competition, oligopoly, and corporate mergers; Gini coefficient and income inequality statistics are not in the corpus (verified via full-text search for Gini and inequality across all 50 pages).). Agent properly abstained without fabricating facts or citations."
+  },
+  {
+    "query_id": "U002",
+    "answerable": false,
+    "status": "abstain",
+    "citation_support": [],
+    "abstention_correct": true,
+    "reason": "[agent-dev-chosen] Question asks about out-of-corpus facts (Section 10.2 discusses the Archer Daniels Midland (ADM) lysine cartel ( million fine) and French soap cartel (€361 million fine), but contains no mention of Hoffman-La Roche or the vitamin cartel (verified across pages 33-38).). Agent properly abstained without fabricating facts or citations."
+  }
+]

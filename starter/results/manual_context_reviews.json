@@ -1,0 +1,261 @@
+{
+  "split": "test",
+  "evaluated_questions": 7,
+  "baseline_dense_b800_grades": {
+    "0": 7,
+    "1": 0,
+    "2": 0,
+    "mean": 0.0
+  },
+  "chosen_hybrid_rerank_b3600_grades": {
+    "0": 0,
+    "1": 0,
+    "2": 7,
+    "mean": 2.0
+  },
+  "reviews": [
+    {
+      "query_id": "Q024",
+      "question": "What did the British Tea Act make the East India Company in the American colonies?",
+      "expected_answer": "The sole legal supplier of tea to the American colonies.",
+      "gold_chunk_ids": [
+        "principles-economics-3e-monopoly-p1-chunk1"
+      ],
+      "baseline_dense_b800": {
+        "retrieved_top3_ids": [
+          "principles-economics-3e-monopoly-p1-chunk1",
+          "principles-economics-3e-monopoly-p17-chunk1",
+          "principles-economics-3e-monopoly-p17-chunk2"
+        ],
+        "packed_context_ids": [],
+        "context_char_length": 0,
+        "context_grade": 0,
+        "reason": "Context grade 0/2 (no evidence in final context): Dense retrieval found ['principles-economics-3e-monopoly-p1-chunk1', 'principles-economics-3e-monopoly-p17-chunk1', 'principles-economics-3e-monopoly-p17-chunk2'], but all 3 chunks were ~900 chars (~970 chars with '[id | source | page]' header), exceeding budget=800, so pack_context dropped all of them (context='')."
+      },
+      "chosen_hybrid_rerank_b3600": {
+        "retrieved_top3_ids": [
+          "principles-economics-3e-monopoly-p1-chunk1",
+          "principles-economics-3e-monopoly-p17-chunk1",
+          "principles-economics-3e-monopoly-p1-chunk0"
+        ],
+        "packed_context_ids": [
+          "principles-economics-3e-monopoly-p1-chunk1",
+          "principles-economics-3e-monopoly-p17-chunk1",
+          "principles-economics-3e-monopoly-p1-chunk0"
+        ],
+        "context_char_length": 2880,
+        "context_grade": 2,
+        "reason": "Context grade 2/2 (complete evidence and source metadata): Hybrid RRF + Reranker ranked gold chunk 'principles-economics-3e-monopoly-p1-chunk1' at #1, and budget=3600 packed 3 full chunks (2880 chars) including complete verbatim evidence and [chunk_id | source | page] citation headers."
+      }
+    },
+    {
+      "query_id": "Q025",
+      "question": "What is the key difference between marginal revenue for a perfectly competitive firm and for a monopolist?",
+      "expected_answer": "Under perfect competition marginal revenue equals price; for a monopolist it does not, because changes in output affect the price.",
+      "gold_chunk_ids": [
+        "principles-economics-3e-monopoly-p13-chunk1"
+      ],
+      "baseline_dense_b800": {
+        "retrieved_top3_ids": [
+          "principles-economics-3e-monopoly-p13-chunk1",
+          "principles-economics-3e-monopoly-p10-chunk2",
+          "principles-economics-3e-monopoly-p11-chunk0"
+        ],
+        "packed_context_ids": [],
+        "context_char_length": 0,
+        "context_grade": 0,
+        "reason": "Context grade 0/2 (no evidence in final context): Dense retrieval found ['principles-economics-3e-monopoly-p13-chunk1', 'principles-economics-3e-monopoly-p10-chunk2', 'principles-economics-3e-monopoly-p11-chunk0'], but all 3 chunks were ~900 chars (~970 chars with '[id | source | page]' header), exceeding budget=800, so pack_context dropped all of them (context='')."
+      },
+      "chosen_hybrid_rerank_b3600": {
+        "retrieved_top3_ids": [
+          "principles-economics-3e-monopoly-p13-chunk1",
+          "principles-economics-3e-monopoly-p9-chunk1",
+          "principles-economics-3e-monopoly-p7-chunk2"
+        ],
+        "packed_context_ids": [
+          "principles-economics-3e-monopoly-p13-chunk1",
+          "principles-economics-3e-monopoly-p9-chunk1",
+          "principles-economics-3e-monopoly-p7-chunk2"
+        ],
+        "context_char_length": 2990,
+        "context_grade": 2,
+        "reason": "Context grade 2/2 (complete evidence and source metadata): Hybrid RRF + Reranker ranked gold chunk 'principles-economics-3e-monopoly-p13-chunk1' at #1, and budget=3600 packed 3 full chunks (2990 chars) including complete verbatim evidence and [chunk_id | source | page] citation headers."
+      }
+    },
+    {
+      "query_id": "Q026",
+      "question": "In section 9.1, why can one producer serve the market more efficiently than several smaller natural-monopoly utilities?",
+      "expected_answer": "Because of economies of scale, one producer avoids the duplicate physical capital investments that smaller producers would need.",
+      "gold_chunk_ids": [
+        "principles-economics-3e-monopoly-p4-chunk1"
+      ],
+      "baseline_dense_b800": {
+        "retrieved_top3_ids": [
+          "principles-economics-3e-monopoly-p4-chunk2",
+          "principles-economics-3e-monopoly-p7-chunk0",
+          "principles-economics-3e-monopoly-p4-chunk0"
+        ],
+        "packed_context_ids": [],
+        "context_char_length": 0,
+        "context_grade": 0,
+        "reason": "Context grade 0/2 (no evidence in final context): Dense retrieval found ['principles-economics-3e-monopoly-p4-chunk2', 'principles-economics-3e-monopoly-p7-chunk0', 'principles-economics-3e-monopoly-p4-chunk0'], but all 3 chunks were ~900 chars (~970 chars with '[id | source | page]' header), exceeding budget=800, so pack_context dropped all of them (context='')."
+      },
+      "chosen_hybrid_rerank_b3600": {
+        "retrieved_top3_ids": [
+          "principles-economics-3e-monopoly-p4-chunk1",
+          "principles-economics-3e-monopoly-p5-chunk0",
+          "principles-economics-3e-monopoly-p7-chunk0"
+        ],
+        "packed_context_ids": [
+          "principles-economics-3e-monopoly-p4-chunk1",
+          "principles-economics-3e-monopoly-p5-chunk0",
+          "principles-economics-3e-monopoly-p7-chunk0"
+        ],
+        "context_char_length": 3007,
+        "context_grade": 2,
+        "reason": "Context grade 2/2 (complete evidence and source metadata): Hybrid RRF + Reranker ranked gold chunk 'principles-economics-3e-monopoly-p4-chunk1' at #1, and budget=3600 packed 3 full chunks (3007 chars) including complete verbatim evidence and [chunk_id | source | page] citation headers."
+      }
+    },
+    {
+      "query_id": "Q027",
+      "question": "What happens to a firm's quantity demanded at a given price as more firms enter a monopolistically competitive market?",
+      "expected_answer": "The quantity demanded for any particular firm declines.",
+      "gold_chunk_ids": [
+        "principles-economics-3e-monopoly-p29-chunk2"
+      ],
+      "baseline_dense_b800": {
+        "retrieved_top3_ids": [
+          "principles-economics-3e-monopoly-p32-chunk4",
+          "principles-economics-3e-monopoly-p30-chunk0",
+          "principles-economics-3e-monopoly-p29-chunk2"
+        ],
+        "packed_context_ids": [],
+        "context_char_length": 0,
+        "context_grade": 0,
+        "reason": "Context grade 0/2 (no evidence in final context): Dense retrieval found ['principles-economics-3e-monopoly-p32-chunk4', 'principles-economics-3e-monopoly-p30-chunk0', 'principles-economics-3e-monopoly-p29-chunk2'], but all 3 chunks were ~900 chars (~970 chars with '[id | source | page]' header), exceeding budget=800, so pack_context dropped all of them (context='')."
+      },
+      "chosen_hybrid_rerank_b3600": {
+        "retrieved_top3_ids": [
+          "principles-economics-3e-monopoly-p29-chunk2",
+          "principles-economics-3e-monopoly-p31-chunk0",
+          "principles-economics-3e-monopoly-p32-chunk4"
+        ],
+        "packed_context_ids": [
+          "principles-economics-3e-monopoly-p29-chunk2",
+          "principles-economics-3e-monopoly-p31-chunk0",
+          "principles-economics-3e-monopoly-p32-chunk4"
+        ],
+        "context_char_length": 3013,
+        "context_grade": 2,
+        "reason": "Context grade 2/2 (complete evidence and source metadata): Hybrid RRF + Reranker ranked gold chunk 'principles-economics-3e-monopoly-p29-chunk2' at #1, and budget=3600 packed 3 full chunks (3013 chars) including complete verbatim evidence and [chunk_id | source | page] citation headers."
+      }
+    },
+    {
+      "query_id": "Q028",
+      "question": "What two conflicting temptations do oligopolistic firms face?",
+      "expected_answer": "To collaborate as if they were a single monopoly, or to compete individually by expanding output and cutting prices.",
+      "gold_chunk_ids": [
+        "principles-economics-3e-monopoly-p24-chunk3"
+      ],
+      "baseline_dense_b800": {
+        "retrieved_top3_ids": [
+          "principles-economics-3e-monopoly-p36-chunk3",
+          "principles-economics-3e-monopoly-p33-chunk3",
+          "principles-economics-3e-monopoly-p32-chunk2"
+        ],
+        "packed_context_ids": [],
+        "context_char_length": 0,
+        "context_grade": 0,
+        "reason": "Context grade 0/2 (no evidence in final context): Dense retrieval found ['principles-economics-3e-monopoly-p36-chunk3', 'principles-economics-3e-monopoly-p33-chunk3', 'principles-economics-3e-monopoly-p32-chunk2'], but all 3 chunks were ~900 chars (~970 chars with '[id | source | page]' header), exceeding budget=800, so pack_context dropped all of them (context='')."
+      },
+      "chosen_hybrid_rerank_b3600": {
+        "retrieved_top3_ids": [
+          "principles-economics-3e-monopoly-p24-chunk3",
+          "principles-economics-3e-monopoly-p32-chunk2",
+          "principles-economics-3e-monopoly-p24-chunk0"
+        ],
+        "packed_context_ids": [
+          "principles-economics-3e-monopoly-p24-chunk3",
+          "principles-economics-3e-monopoly-p32-chunk2",
+          "principles-economics-3e-monopoly-p24-chunk0"
+        ],
+        "context_char_length": 3013,
+        "context_grade": 2,
+        "reason": "Context grade 2/2 (complete evidence and source metadata): Hybrid RRF + Reranker ranked gold chunk 'principles-economics-3e-monopoly-p24-chunk3' at #1, and budget=3600 packed 3 full chunks (3013 chars) including complete verbatim evidence and [chunk_id | source | page] citation headers."
+      }
+    },
+    {
+      "query_id": "Q029",
+      "question": "Why did the soap cartel disintegrate?",
+      "expected_answer": "Because of the strong temptation for each member to maximize its own individual profits.",
+      "gold_chunk_ids": [
+        "principles-economics-3e-monopoly-p33-chunk3",
+        "principles-economics-3e-monopoly-p38-chunk1"
+      ],
+      "baseline_dense_b800": {
+        "retrieved_top3_ids": [
+          "principles-economics-3e-monopoly-p38-chunk1",
+          "principles-economics-3e-monopoly-p23-chunk1",
+          "principles-economics-3e-monopoly-p39-chunk0"
+        ],
+        "packed_context_ids": [
+          "principles-economics-3e-monopoly-p23-chunk1"
+        ],
+        "context_char_length": 692,
+        "context_grade": 0,
+        "reason": "Context grade 0/2 (no evidence in final context): Dense retrieval found ['principles-economics-3e-monopoly-p38-chunk1', 'principles-economics-3e-monopoly-p23-chunk1', 'principles-economics-3e-monopoly-p39-chunk0'], pack_context only kept ['principles-economics-3e-monopoly-p23-chunk1'] (a short chunk on page 23 introducing the soap cartel's secret meetings), while dropping the 900-char evidence chunk principles-economics-3e-monopoly-p38-chunk1 that explains why the cartel disintegrated."
+      },
+      "chosen_hybrid_rerank_b3600": {
+        "retrieved_top3_ids": [
+          "principles-economics-3e-monopoly-p38-chunk1",
+          "principles-economics-3e-monopoly-p23-chunk1",
+          "principles-economics-3e-monopoly-p38-chunk0"
+        ],
+        "packed_context_ids": [
+          "principles-economics-3e-monopoly-p38-chunk1",
+          "principles-economics-3e-monopoly-p23-chunk1",
+          "principles-economics-3e-monopoly-p38-chunk0",
+          "principles-economics-3e-monopoly-p36-chunk5"
+        ],
+        "context_char_length": 3066,
+        "context_grade": 2,
+        "reason": "Context grade 2/2 (complete evidence and source metadata): Hybrid RRF + Reranker ranked gold chunk 'principles-economics-3e-monopoly-p38-chunk1' at #1, and budget=3600 packed 4 full chunks (3066 chars) including complete verbatim evidence and [chunk_id | source | page] citation headers."
+      }
+    },
+    {
+      "query_id": "Q030",
+      "question": "In section 10.2, what is a kinked demand curve?",
+      "expected_answer": "A demand curve in which competing oligopoly firms commit to match price cuts but not price increases.",
+      "gold_chunk_ids": [
+        "principles-economics-3e-monopoly-p36-chunk3",
+        "principles-economics-3e-monopoly-p39-chunk0"
+      ],
+      "baseline_dense_b800": {
+        "retrieved_top3_ids": [
+          "principles-economics-3e-monopoly-p37-chunk0",
+          "principles-economics-3e-monopoly-p39-chunk2",
+          "principles-economics-3e-monopoly-p36-chunk3"
+        ],
+        "packed_context_ids": [],
+        "context_char_length": 0,
+        "context_grade": 0,
+        "reason": "Context grade 0/2 (no evidence in final context): Dense retrieval found ['principles-economics-3e-monopoly-p37-chunk0', 'principles-economics-3e-monopoly-p39-chunk2', 'principles-economics-3e-monopoly-p36-chunk3'], but all 3 chunks were ~900 chars (~970 chars with '[id | source | page]' header), exceeding budget=800, so pack_context dropped all of them (context='')."
+      },
+      "chosen_hybrid_rerank_b3600": {
+        "retrieved_top3_ids": [
+          "principles-economics-3e-monopoly-p39-chunk0",
+          "principles-economics-3e-monopoly-p37-chunk0",
+          "principles-economics-3e-monopoly-p36-chunk3"
+        ],
+        "packed_context_ids": [
+          "principles-economics-3e-monopoly-p39-chunk0",
+          "principles-economics-3e-monopoly-p37-chunk0",
+          "principles-economics-3e-monopoly-p36-chunk3"
+        ],
+        "context_char_length": 3013,
+        "context_grade": 2,
+        "reason": "Context grade 2/2 (complete evidence and source metadata): Hybrid RRF + Reranker ranked gold chunk 'principles-economics-3e-monopoly-p39-chunk0' at #1, and budget=3600 packed 3 full chunks (3013 chars) including complete verbatim evidence and [chunk_id | source | page] citation headers."
+      }
+    }
+  ]
+}

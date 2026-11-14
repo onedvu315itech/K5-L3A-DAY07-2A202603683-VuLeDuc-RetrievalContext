@@ -1,0 +1,208 @@
+[
+  {
+    "query_id": "Q001",
+    "answerable": true,
+    "status": "abstain",
+    "answer_grade": 0,
+    "citation_support": [],
+    "reason": "[agent-dev-baseline] False abstention (graded 0 per rubric). Context budget (800 chars) dropped the retrieved ~900-char evidence chunks, leaving empty/insufficient context."
+  },
+  {
+    "query_id": "Q002",
+    "answerable": true,
+    "status": "answered",
+    "answer_grade": 1,
+    "citation_support": [
+      false
+    ],
+    "reason": "[agent-dev-baseline] Partial grade (1/2) and unsupported citation: p6-chunk5 fit inside the 800-char budget only because it is a 198-char page-end fragment stating that barriers to entry prevent perfect competition and lead to monopoly, but it does NOT contain the formal definition of barriers to entry (which was in p2-chunk2 / p18-chunk2, dropped by the 800-char budget)."
+  },
+  {
+    "query_id": "Q003",
+    "answerable": true,
+    "status": "abstain",
+    "answer_grade": 0,
+    "citation_support": [],
+    "reason": "[agent-dev-baseline] False abstention (graded 0 per rubric). Context budget (800 chars) dropped the retrieved ~900-char evidence chunks, leaving empty/insufficient context."
+  },
+  {
+    "query_id": "Q004",
+    "answerable": true,
+    "status": "answered",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "[agent-dev-baseline] Full score (2/2): Answer accurately and completely addresses 'In section 9.1, why were other firms unable to compete with ALCOA in aluminum in the 1930s?' matching expected answer ('ALCOA controlled most of the supply of bauxite, so other firms could not produce enough aluminum to compete.'), and cited chunk(s) ['principles-economics-3e-monopoly-p4-chunk3'] directly contain the supporting evidence in the PDF."
+  },
+  {
+    "query_id": "Q005",
+    "answerable": true,
+    "status": "abstain",
+    "answer_grade": 0,
+    "citation_support": [],
+    "reason": "[agent-dev-baseline] False abstention (graded 0 per rubric). Context budget (800 chars) dropped the retrieved ~900-char evidence chunks, leaving empty/insufficient context."
+  },
+  {
+    "query_id": "Q006",
+    "answerable": true,
+    "status": "abstain",
+    "answer_grade": 0,
+    "citation_support": [],
+    "reason": "[agent-dev-baseline] False abstention (graded 0 per rubric). Context budget (800 chars) dropped the retrieved ~900-char evidence chunks, leaving empty/insufficient context."
+  },
+  {
+    "query_id": "Q007",
+    "answerable": true,
+    "status": "abstain",
+    "answer_grade": 0,
+    "citation_support": [],
+    "reason": "[agent-dev-baseline] False abstention (graded 0 per rubric). Context budget (800 chars) dropped the retrieved ~900-char evidence chunks, leaving empty/insufficient context."
+  },
+  {
+    "query_id": "Q008",
+    "answerable": true,
+    "status": "abstain",
+    "answer_grade": 0,
+    "citation_support": [],
+    "reason": "[agent-dev-baseline] False abstention (graded 0 per rubric). Context budget (800 chars) dropped the retrieved ~900-char evidence chunks, leaving empty/insufficient context."
+  },
+  {
+    "query_id": "Q009",
+    "answerable": true,
+    "status": "abstain",
+    "answer_grade": 0,
+    "citation_support": [],
+    "reason": "[agent-dev-baseline] False abstention (graded 0 per rubric). Context budget (800 chars) dropped the retrieved ~900-char evidence chunks, leaving empty/insufficient context."
+  },
+  {
+    "query_id": "Q010",
+    "answerable": true,
+    "status": "abstain",
+    "answer_grade": 0,
+    "citation_support": [],
+    "reason": "[agent-dev-baseline] False abstention (graded 0 per rubric). Context budget (800 chars) dropped the retrieved ~900-char evidence chunks, leaving empty/insufficient context."
+  },
+  {
+    "query_id": "Q011",
+    "answerable": true,
+    "status": "abstain",
+    "answer_grade": 0,
+    "citation_support": [],
+    "reason": "[agent-dev-baseline] False abstention (graded 0 per rubric). Context budget (800 chars) dropped the retrieved ~900-char evidence chunks, leaving empty/insufficient context."
+  },
+  {
+    "query_id": "Q012",
+    "answerable": true,
+    "status": "abstain",
+    "answer_grade": 0,
+    "citation_support": [],
+    "reason": "[agent-dev-baseline] False abstention (graded 0 per rubric). Context budget (800 chars) dropped the retrieved ~900-char evidence chunks, leaving empty/insufficient context."
+  },
+  {
+    "query_id": "Q013",
+    "answerable": true,
+    "status": "abstain",
+    "answer_grade": 0,
+    "citation_support": [],
+    "reason": "[agent-dev-baseline] False abstention (graded 0 per rubric). Context budget (800 chars) dropped the retrieved ~900-char evidence chunks, leaving empty/insufficient context."
+  },
+  {
+    "query_id": "Q014",
+    "answerable": true,
+    "status": "abstain",
+    "answer_grade": 0,
+    "citation_support": [],
+    "reason": "[agent-dev-baseline] False abstention (graded 0 per rubric). Context budget (800 chars) dropped the retrieved ~900-char evidence chunks, leaving empty/insufficient context."
+  },
+  {
+    "query_id": "Q015",
+    "answerable": true,
+    "status": "abstain",
+    "answer_grade": 0,
+    "citation_support": [],
+    "reason": "[agent-dev-baseline] False abstention (graded 0 per rubric). Context budget (800 chars) dropped the retrieved ~900-char evidence chunks, leaving empty/insufficient context."
+  },
+  {
+    "query_id": "Q016",
+    "answerable": true,
+    "status": "abstain",
+    "answer_grade": 0,
+    "citation_support": [],
+    "reason": "[agent-dev-baseline] False abstention (graded 0 per rubric). Context budget (800 chars) dropped the retrieved ~900-char evidence chunks, leaving empty/insufficient context."
+  },
+  {
+    "query_id": "Q017",
+    "answerable": true,
+    "status": "abstain",
+    "answer_grade": 0,
+    "citation_support": [],
+    "reason": "[agent-dev-baseline] False abstention (graded 0 per rubric). Context budget (800 chars) dropped the retrieved ~900-char evidence chunks, leaving empty/insufficient context."
+  },
+  {
+    "query_id": "Q018",
+    "answerable": true,
+    "status": "answered",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "[agent-dev-baseline] Full score (2/2): Answer accurately and completely addresses 'How can a successful advertising campaign help a monopolistically competitive firm?' matching expected answer ('It may let the firm sell a greater quantity, charge a higher price, or both.'), and cited chunk(s) ['principles-economics-3e-monopoly-p31-chunk5'] directly contain the supporting evidence in the PDF."
+  },
+  {
+    "query_id": "Q019",
+    "answerable": true,
+    "status": "abstain",
+    "answer_grade": 0,
+    "citation_support": [],
+    "reason": "[agent-dev-baseline] False abstention (graded 0 per rubric). Context budget (800 chars) dropped the retrieved ~900-char evidence chunks, leaving empty/insufficient context."
+  },
+  {
+    "query_id": "Q020",
+    "answerable": true,
+    "status": "abstain",
+    "answer_grade": 0,
+    "citation_support": [],
+    "reason": "[agent-dev-baseline] False abstention (graded 0 per rubric). Context budget (800 chars) dropped the retrieved ~900-char evidence chunks, leaving empty/insufficient context."
+  },
+  {
+    "query_id": "Q021",
+    "answerable": true,
+    "status": "abstain",
+    "answer_grade": 0,
+    "citation_support": [],
+    "reason": "[agent-dev-baseline] False abstention (graded 0 per rubric). Context budget (800 chars) dropped the retrieved ~900-char evidence chunks, leaving empty/insufficient context."
+  },
+  {
+    "query_id": "Q022",
+    "answerable": true,
+    "status": "abstain",
+    "answer_grade": 0,
+    "citation_support": [],
+    "reason": "[agent-dev-baseline] False abstention (graded 0 per rubric). Context budget (800 chars) dropped the retrieved ~900-char evidence chunks, leaving empty/insufficient context."
+  },
+  {
+    "query_id": "Q023",
+    "answerable": true,
+    "status": "abstain",
+    "answer_grade": 0,
+    "citation_support": [],
+    "reason": "[agent-dev-baseline] False abstention (graded 0 per rubric). Context budget (800 chars) dropped the retrieved ~900-char evidence chunks, leaving empty/insufficient context."
+  },
+  {
+    "query_id": "U001",
+    "answerable": false,
+    "status": "abstain",
+    "citation_support": [],
+    "abstention_correct": true,
+    "reason": "[agent-dev-baseline] Question asks about out-of-corpus facts (Chapters 9-11.1 cover monopoly, monopolistic competition, oligopoly, and corporate mergers; Gini coefficient and income inequality statistics are not in the corpus (verified via full-text search for Gini and inequality across all 50 pages).). Agent properly abstained without fabricating facts or citations."
+  },
+  {
+    "query_id": "U002",
+    "answerable": false,
+    "status": "abstain",
+    "citation_support": [],
+    "abstention_correct": true,
+    "reason": "[agent-dev-baseline] Question asks about out-of-corpus facts (Section 10.2 discusses the Archer Daniels Midland (ADM) lysine cartel ( million fine) and French soap cartel (€361 million fine), but contains no mention of Hoffman-La Roche or the vitamin cartel (verified across pages 33-38).). Agent properly abstained without fabricating facts or citations."
+  }
+]

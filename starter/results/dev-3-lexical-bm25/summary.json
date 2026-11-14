@@ -1,0 +1,16 @@
+{
+  "strategy": "lexical_bm25",
+  "split": "dev",
+  "top_k": 3,
+  "budget_chars": 800,
+  "n": 23,
+  "hit1": 7,
+  "hit1_rate": 0.3043,
+  "hit3": 10,
+  "hit3_rate": 0.4348,
+  "context_hit": 2,
+  "context_hit_rate": 0.087,
+  "avg_context_chars": 188.65,
+  "median_ms": 0.981,
+  "service_cost_usd": 0.0
+}
